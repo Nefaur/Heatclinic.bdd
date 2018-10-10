@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="29.554589">
+<testcase classname="Checkout page function of www.heatclinic.com" name="Testing the checkout page functionality for valid users" time="29.554589">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given Existing Valid User opens browser.....................................passed
+When Existing Valid User goes to "https://demo.broadleafcommerce.org/" website.passed
+Then Existing Valid User hovers to sign_in_link.............................passed
+Then Existing Valid User clicks sign_in_link................................passed
+Then Existing Valid User enters username and password in login text fields..passed
+Then Existing Valid User clicks on submit button............................passed
+Then Existing Valid User is taken to member page............................passed
+Then Existing Valid User enters text in search field........................passed
+Then Logged in User chooses the selection from search box field.............passed
+Then Logged in User filters the selection by choosing price range...........passed
+Then Logged in User clicks on a selection from search result................passed
+Then Logged in User clicks add to cart......................................passed
+Then Logged in User goes to view cart page..................................passed
+Then Logged in User goes to checkout page...................................passed
+And User increases the number of selected items to two......................passed
+Then Logged in User fills in shipping information and clicks Continue.......pending
+Then Logged in User fills in payment information............................skipped
+Then Logged in User gets purchase confirmation notification.................skipped
+Then Logged in User logouts.................................................skipped
+Then Logged out User closes browser.........................................skipped
+]]></failure>
+</testcase>
+</testsuite>
