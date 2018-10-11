@@ -1,8 +1,9 @@
 Feature: Login function test of www.heatclinic.com
 Description: Test to check whether a user can follow the process to login and logout of Member Page.
 
- 
-@FunctionalTest @SmokeTest @SanityTest
+@FunctionalTest 
+@SmokeTest 
+@SanityTest
 Scenario: User enters valids username and password to enter authorized login homepage
 
 Given User opens browser

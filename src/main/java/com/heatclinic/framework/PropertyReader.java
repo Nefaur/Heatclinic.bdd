@@ -6,6 +6,8 @@ import java.io.InputStream;
 import java.util.Map;
 import java.util.Properties;
 
+
+
 public class PropertyReader {
 	
 	private static PropertyReader instance = null;
@@ -62,4 +64,6 @@ public class PropertyReader {
 	public static String BROWSER_TO_RUN=PropertyReader.getInstance().getProperty("browser");
 	public static String USERNAME=PropertyReader.getInstance().getProperty("username");
 	public static String PASSWORD=PropertyReader.getInstance().getProperty("password");
+	public static String EXCEL_FILEPATH=PropertyReader.getInstance().getProperty("excelfilepath");
+	public static String EXCEL_FILENAME=PropertyReader.getInstance().getProperty("excelfilename");
 }

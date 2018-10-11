@@ -1,9 +1,6 @@
 package com.heatclinic.pages;
 
 
-
-
-
 import java.util.concurrent.TimeUnit;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +10,6 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import com.heatclinic.framework.DriverFactory;
 import com.heatclinic.framework.PropertyReader;
-import com.heatclinic.utilities.JavaScriptActions;
 import com.heatclinic.utilities.Mouseandkeyboardactions;
 
 
@@ -26,14 +22,13 @@ public class MemberPage {
 	@FindBy(how=How.XPATH,using="//li[@class='dropdown']//a[@class='dropdown-toggle']")
 	WebElement USER_MENU;
 	
-	@FindBy(how=How.XPATH,using="//a[contains(text(),'My Profile')]")
+	@FindBy(how=How.XPATH,using="/html[1]/body[1]/nav[1]/div[1]/div[1]/ul[2]/li[1]/a[1]")
 	WebElement USER_PROFILE;
 		
 	@FindBy(how=How.XPATH,using="//a[contains(text(),'Logout')]")
 	WebElement LOG_OUT;
 	
 	private Mouseandkeyboardactions mousefunction=new Mouseandkeyboardactions();
-	private JavaScriptActions js=new JavaScriptActions();
 	private String expectedMemberPageURL="https://demo.broadleafcommerce.org/";
 	LoginPage logPage=new LoginPage();
 	
@@ -60,18 +55,14 @@ public class MemberPage {
 
 	public void verify_Member(){
 		delay(3000);
-		js.javaClickWebElement(USER_MENU, driver);
-		Boolean userProf=USER_PROFILE.isDisplayed();
-		System.out.println("User profile is displayed: "+ userProf);
+		String userlogged=USER_PROFILE.getText();
+		System.out.println("User name: "+ userlogged.substring(14, 20));
 		}
 	
 	public void logout() {
-		if(USER_PROFILE.isDisplayed()) {
-			mousefunction.mouseClick(driver, LOG_OUT);
-		}else {
 		mousefunction.mouseClick(driver, USER_MENU);
+		sleeper(2000);
 		mousefunction.mouseClick(driver, LOG_OUT);
-		}
 		System.out.println("User is logged out.");
 	}
 	

@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 6284323010,
+              "duration": 6468876419,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 3,
-        "name": "Testing the checkout page functionality for valid users",
+        "line": 19,
+        "name": "Testing the login functionality for invalid users",
         "description": "",
-        "id": "checkout-page-function-of-www.heatclinic.com;testing-the-checkout-page-functionality-for-valid-users",
+        "id": "invalid-login-function-of-www.heatclinic.com;testing-the-login-functionality-for-invalid-users;;2",
         "after": [
           {
             "result": {
-              "duration": 59280,
+              "duration": 2348331585,
               "status": "passed"
             },
             "match": {
@@ -30,286 +30,441 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 66915568,
+              "duration": 69855032,
               "status": "passed"
             },
-            "line": 5,
-            "name": "Existing Valid User opens browser",
+            "line": 7,
+            "name": "Invalid User opens browser",
             "match": {
-              "location": "ValidCheckout.existing_Valid_User_opens_browser()"
+              "location": "Invalidlogin.invalid_user_opens_browser()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1125742229,
+              "duration": 4623635708,
               "status": "passed"
             },
-            "line": 6,
-            "name": "Existing Valid User goes to \"https://demo.broadleafcommerce.org/\" website",
+            "line": 8,
+            "name": "Invalid User goes to \"https://demo.broadleafcommerce.org/\" website",
             "match": {
               "arguments": [
                 {
                   "val": "\"https://demo.broadleafcommerce.org/\"",
-                  "offset": 28
+                  "offset": 21
                 }
               ],
-              "location": "ValidCheckout.existing_Valid_User_goes_to_website(String)"
+              "location": "Invalidlogin.invalid_user_goes_to_website(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 140043845,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "Existing Valid User hovers to sign_in_link",
-            "match": {
-              "location": "ValidCheckout.existing_Valid_User_hovers_to_sign_in_link()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 388926395,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "Existing Valid User clicks sign_in_link",
-            "match": {
-              "location": "ValidCheckout.existing_Valid_User_clicks_sign_in_link()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 493603409,
+              "duration": 4196580480,
               "status": "passed"
             },
             "line": 9,
-            "name": "Existing Valid User enters username and password in login text fields",
+            "name": "Invalid User hovers to sign_in_link",
             "match": {
-              "location": "ValidCheckout.existing_Valid_User_enters_username_and_password_in_login_text_fields(DataTable)"
+              "location": "Invalidlogin.invalid_user_hovers_to_sign_in_link()"
             },
-            "rows": [
-              {
-                "cells": [
-                  "moltenboy.robin@gmail.com",
-                  "A1234567@"
-                ]
-              }
-            ],
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 422599778,
+              "duration": 167375008,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Invalid User clicks sign_in_link",
+            "match": {
+              "location": "Invalidlogin.invalid_user_clicks_sign_in_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10109212889,
               "status": "passed"
             },
             "line": 11,
-            "name": "Existing Valid User clicks on submit button",
+            "name": "Invalid User enters \"moltenboy.robin@gmail.com\" as username",
             "match": {
-              "location": "ValidCheckout.existing_Valid_User_clicks_on_submit_button()"
+              "arguments": [
+                {
+                  "val": "\"moltenboy.robin@gmail.com\"",
+                  "offset": 20
+                }
+              ],
+              "location": "Invalidlogin.invalid_User_enters_as_username(String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 110941452,
+              "duration": 2036885837,
               "status": "passed"
             },
             "line": 12,
-            "name": "Existing Valid User is taken to member page",
+            "name": "Invalid User enters \"123456789\" as password",
             "match": {
-              "location": "ValidCheckout.existing_Valid_User_is_taken_to_member_page()"
+              "arguments": [
+                {
+                  "val": "\"123456789\"",
+                  "offset": 20
+                }
+              ],
+              "location": "Invalidlogin.invalid_User_enters_as_password(String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 91843431,
+              "duration": 2034915622,
               "status": "passed"
             },
             "line": 13,
-            "name": "Existing Valid User enters text in search field",
+            "name": "Invalid User clicks on submit button",
             "match": {
-              "location": "ValidCheckout.existing_Valid_User_enters_text_in_search_field(DataTable)"
+              "location": "Invalidlogin.invalid_User_clicks_on_submit_button()"
             },
-            "rows": [
-              {
-                "cells": [
-                  "Search"
-                ]
-              },
-              {
-                "cells": [
-                  "Hot"
-                ]
-              }
-            ],
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1133993495,
+              "duration": 518020405,
               "status": "passed"
             },
-            "line": 16,
-            "name": "Logged in User chooses the selection from search box field",
+            "line": 14,
+            "name": "Invalid User gets failed login message",
             "match": {
-              "location": "ValidCheckout.logged_in_User_chooses_the_selection_from_search_box_field()"
+              "location": "Invalidlogin.invalid_user_gets_failed_login_message()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 7286931713,
+              "duration": 125734,
               "status": "passed"
             },
-            "line": 17,
-            "name": "Logged in User filters the selection by choosing price range",
+            "line": 15,
+            "name": "Invalid User closes browser",
             "match": {
-              "location": "ValidCheckout.logged_in_User_filters_the_selection_by_choosing_price_range()"
+              "location": "Invalidlogin.invalid_user_closes_browser()"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FunctionalTest"
           },
           {
+            "name": "@SmokeTest"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
             "result": {
-              "duration": 5155475936,
+              "error_message": "org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027NEFAUR\u0027, ip: \u0027192.168.137.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00279.0.4\u0027\nDriver info: driver.version: RemoteWebDriver\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:690)\r\n\tat com.heatclinic.steps.ScriptBase.setUp(ScriptBase.java:19)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:40)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\r\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:124)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:133)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)\r\n",
+              "duration": 1011538,
+              "status": "failed"
+            },
+            "match": {
+              "location": "ScriptBase.setUp()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Testing the login functionality for invalid users",
+        "description": "",
+        "id": "invalid-login-function-of-www.heatclinic.com;testing-the-login-functionality-for-invalid-users;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 1192777,
               "status": "passed"
             },
-            "line": 18,
-            "name": "Logged in User clicks on a selection from search result",
             "match": {
-              "location": "ValidCheckout.logged_in_User_clicks_on_a_selection_from_search_result()"
-            },
-            "keyword": "Then "
-          },
+              "location": "ScriptBase.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
           {
             "result": {
-              "duration": 4256232909,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "Logged in User clicks add to cart",
-            "match": {
-              "location": "ValidCheckout.logged_in_User_clicks_add_to_cart()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2570822771,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "Logged in User goes to view cart page",
-            "match": {
-              "location": "ValidCheckout.logged_in_User_goes_to_view_cart_page()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 66077,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "Logged in User goes to checkout page",
-            "match": {
-              "location": "ValidCheckout.logged_in_User_goes_to_checkout_page()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 70230,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "User increases the number of selected items to two.",
-            "match": {
-              "location": "ValidCheckout.user_increases_the_number_of_selected_items_to_two()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat com.heatclinic.steps.ValidCheckout.logged_in_User_fills_in_shipping_information_and_clicks_Continue(ValidCheckout.java:111)\r\n\tat ✽.Logged in User fills in shipping information and clicks Continue(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/Checkout.feature:23)\r\n",
-              "duration": 3747486,
-              "status": "pending"
-            },
-            "line": 23,
-            "name": "Logged in User fills in shipping information and clicks Continue",
-            "match": {
-              "location": "ValidCheckout.logged_in_User_fills_in_shipping_information_and_clicks_Continue(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "Full Name",
-                  "Address",
-                  "Address 2",
-                  "City",
-                  "State",
-                  "Postal Code",
-                  "Phone",
-                  "Shipping Method"
-                ]
-              },
-              {
-                "cells": [
-                  "Molten Boy",
-                  "Home",
-                  "-",
-                  "Gotham",
-                  "NY",
-                  "90210",
-                  "999-999-9999",
-                  "Standard"
-                ]
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 36248,
+              "duration": 28318,
               "status": "skipped"
             },
-            "line": 26,
-            "name": "Logged in User fills in payment information",
+            "line": 7,
+            "name": "Invalid User opens browser",
             "match": {
-              "location": "ValidCheckout.logged_in_User_fills_in_payment_information()"
+              "location": "Invalidlogin.invalid_user_opens_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12838,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "Invalid User goes to \"https://demo.broadleafcommerce.org/\" website",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://demo.broadleafcommerce.org/\"",
+                  "offset": 21
+                }
+              ],
+              "location": "Invalidlogin.invalid_user_goes_to_website(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10950,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "Invalid User hovers to sign_in_link",
+            "match": {
+              "location": "Invalidlogin.invalid_user_hovers_to_sign_in_link()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 21900,
+              "duration": 13971,
               "status": "skipped"
             },
-            "line": 27,
-            "name": "Logged in User gets purchase confirmation notification",
+            "line": 10,
+            "name": "Invalid User clicks sign_in_link",
             "match": {
-              "location": "ValidCheckout.logged_in_User_gets_purchase_confirmation_notification()"
+              "location": "Invalidlogin.invalid_user_clicks_sign_in_link()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 15481,
+              "duration": 11705,
               "status": "skipped"
             },
-            "line": 28,
-            "name": "Logged in User logouts",
+            "line": 11,
+            "name": "Invalid User enters \"moltenboy@gmail.com\" as username",
             "match": {
-              "location": "ValidCheckout.logged_in_User_logouts()"
+              "arguments": [
+                {
+                  "val": "\"moltenboy@gmail.com\"",
+                  "offset": 20
+                }
+              ],
+              "location": "Invalidlogin.invalid_User_enters_as_username(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7929,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "Invalid User enters \"A1234567@\" as password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"A1234567@\"",
+                  "offset": 20
+                }
+              ],
+              "location": "Invalidlogin.invalid_User_enters_as_password(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7174,
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "Invalid User clicks on submit button",
+            "match": {
+              "location": "Invalidlogin.invalid_User_clicks_on_submit_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7174,
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "Invalid User gets failed login message",
+            "match": {
+              "location": "Invalidlogin.invalid_user_gets_failed_login_message()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6797,
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "Invalid User closes browser",
+            "match": {
+              "location": "Invalidlogin.invalid_user_closes_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FunctionalTest"
+          },
+          {
+            "name": "@SmokeTest"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027NEFAUR\u0027, ip: \u0027192.168.137.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00279.0.4\u0027\nDriver info: driver.version: RemoteWebDriver\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:690)\r\n\tat com.heatclinic.steps.ScriptBase.setUp(ScriptBase.java:19)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:40)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\r\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:124)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:133)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)\r\n",
+              "duration": 246938,
+              "status": "failed"
+            },
+            "match": {
+              "location": "ScriptBase.setUp()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "Testing the login functionality for invalid users",
+        "description": "",
+        "id": "invalid-login-function-of-www.heatclinic.com;testing-the-login-functionality-for-invalid-users;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 1278487,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ScriptBase.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 16236,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "Invalid User opens browser",
+            "match": {
+              "location": "Invalidlogin.invalid_user_opens_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11328,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "Invalid User goes to \"https://demo.broadleafcommerce.org/\" website",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://demo.broadleafcommerce.org/\"",
+                  "offset": 21
+                }
+              ],
+              "location": "Invalidlogin.invalid_user_goes_to_website(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13593,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "Invalid User hovers to sign_in_link",
+            "match": {
+              "location": "Invalidlogin.invalid_user_hovers_to_sign_in_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 11705,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "Invalid User clicks sign_in_link",
+            "match": {
+              "location": "Invalidlogin.invalid_user_clicks_sign_in_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10950,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Invalid User enters \"moltenboy@gmail.com\" as username",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"moltenboy@gmail.com\"",
+                  "offset": 20
+                }
+              ],
+              "location": "Invalidlogin.invalid_User_enters_as_username(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10949,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "Invalid User enters \"\" as password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 20
+                }
+              ],
+              "location": "Invalidlogin.invalid_User_enters_as_password(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10572,
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "Invalid User clicks on submit button",
+            "match": {
+              "location": "Invalidlogin.invalid_User_clicks_on_submit_button()"
             },
             "keyword": "Then "
           },
@@ -318,26 +473,208 @@
               "duration": 13215,
               "status": "skipped"
             },
-            "line": 29,
-            "name": "Logged out User closes browser",
+            "line": 14,
+            "name": "Invalid User gets failed login message",
             "match": {
-              "location": "ValidCheckout.logged_out_User_closes_browser()"
+              "location": "Invalidlogin.invalid_user_gets_failed_login_message()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9439,
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "Invalid User closes browser",
+            "match": {
+              "location": "Invalidlogin.invalid_user_closes_browser()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@SanityTest"
+            "name": "@FunctionalTest"
+          },
+          {
+            "name": "@SmokeTest"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027NEFAUR\u0027, ip: \u0027192.168.137.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00279.0.4\u0027\nDriver info: driver.version: RemoteWebDriver\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:690)\r\n\tat com.heatclinic.steps.ScriptBase.setUp(ScriptBase.java:19)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:40)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\r\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:124)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:133)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)\r\n",
+              "duration": 249958,
+              "status": "failed"
+            },
+            "match": {
+              "location": "ScriptBase.setUp()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "Testing the login functionality for invalid users",
+        "description": "",
+        "id": "invalid-login-function-of-www.heatclinic.com;testing-the-login-functionality-for-invalid-users;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 2601907,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ScriptBase.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 17368,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "Invalid User opens browser",
+            "match": {
+              "location": "Invalidlogin.invalid_user_opens_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13593,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "Invalid User goes to \"https://demo.broadleafcommerce.org/\" website",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://demo.broadleafcommerce.org/\"",
+                  "offset": 21
+                }
+              ],
+              "location": "Invalidlogin.invalid_user_goes_to_website(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12082,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "Invalid User hovers to sign_in_link",
+            "match": {
+              "location": "Invalidlogin.invalid_user_hovers_to_sign_in_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 11328,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "Invalid User clicks sign_in_link",
+            "match": {
+              "location": "Invalidlogin.invalid_user_clicks_sign_in_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10572,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Invalid User enters \"\" as username",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 20
+                }
+              ],
+              "location": "Invalidlogin.invalid_User_enters_as_username(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10950,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "Invalid User enters \"A1234567@\" as password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"A1234567@\"",
+                  "offset": 20
+                }
+              ],
+              "location": "Invalidlogin.invalid_User_enters_as_password(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10573,
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "Invalid User clicks on submit button",
+            "match": {
+              "location": "Invalidlogin.invalid_User_clicks_on_submit_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10950,
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "Invalid User gets failed login message",
+            "match": {
+              "location": "Invalidlogin.invalid_user_gets_failed_login_message()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15481,
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "Invalid User closes browser",
+            "match": {
+              "location": "Invalidlogin.invalid_user_closes_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FunctionalTest"
+          },
+          {
+            "name": "@SmokeTest"
           }
         ]
       }
     ],
-    "name": "Checkout page function of www.heatclinic.com",
+    "name": "Invalid login function of www.heatclinic.com",
     "description": "",
-    "id": "checkout-page-function-of-www.heatclinic.com",
+    "id": "invalid-login-function-of-www.heatclinic.com",
     "keyword": "Feature",
-    "uri": "I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/Checkout.feature",
+    "uri": "I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature",
     "tags": []
   }
 ]

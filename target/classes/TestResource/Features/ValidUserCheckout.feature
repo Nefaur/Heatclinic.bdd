@@ -1,5 +1,7 @@
 Feature: Checkout page function of www.heatclinic.com
-@SanityTest
+
+@SanityTest 
+@End2EndTests
 Scenario: Testing the checkout page functionality for valid users
 
 Given Existing Valid User opens browser
@@ -19,10 +21,9 @@ Then Logged in User clicks on a selection from search result
 Then Logged in User clicks add to cart
 Then Logged in User goes to view cart page
 Then Logged in User goes to checkout page
-And User increases the number of selected items to two.
+And Logged in User increases the number of selected items to two and then decreases to one
+Then Logged in User clicks checkout button
 Then Logged in User fills in shipping information and clicks Continue
-|Full Name|Address|Address 2|City|State|Postal Code|Phone|Shipping Method|
-|Molten Boy|Home|-|Gotham|NY|90210|999-999-9999|Standard|
 Then Logged in User fills in payment information
 Then Logged in User gets purchase confirmation notification 
 Then Logged in User logouts

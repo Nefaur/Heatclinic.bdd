@@ -1,7 +1,7 @@
 Feature: Search function of www.heatclinic.com
 
- 
-@FunctionalTest @SanityTest
+@FunctionalTest 
+@SanityTest
 Scenario: Testing the search functionality for valid users
 
 Given Valid User opens browser

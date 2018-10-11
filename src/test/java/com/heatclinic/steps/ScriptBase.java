@@ -24,11 +24,11 @@ public class ScriptBase extends TestBase{
 	
 	@After
 	public void tearDown(){
-//	try {
-//		DriverFactory.initialize().tearDown();
-//	} catch (Exception e) {
-//		e.printStackTrace();
-//	}
+	try {
+		DriverFactory.initialize().tearDown();
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
 	}
 	
 }

@@ -3,8 +3,6 @@ package com.heatclinic.pages;
 import static org.junit.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
-
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,6 +30,7 @@ public class ProductPage {
 	
 	@FindBy(how=How.XPATH,using="//i[contains(text(),'favorite_border')]")
 	WebElement FAVORITE_BUTTON;
+	
 	
 	@FindBy(how=How.XPATH,using="//div[@class='toast-message']")
 	WebElement FAVORITE_SUCCESS;
@@ -75,7 +74,7 @@ public class ProductPage {
 		String productPageURL=driver.getCurrentUrl();
 		System.out.println("Product page URL is: "+productPageURL);
 		String productPageTitle=driver.getTitle();
-		System.out.println("Loginpage title is: "+productPageTitle);
+		System.out.println("Product title is: "+productPageTitle);
 	}
 	
 	public void product_Details() {
@@ -83,34 +82,27 @@ public class ProductPage {
 	}
 	
 	public void addToCart() {
-		if(FAVORITE_BUTTON.isSelected()) {
-			js.javaClickWebElement(ADD_TO_CART, driver);
+		delay(2000);
+			FAVORITE_BUTTON.click();
+			sleeper(2000);
+			assertTrue(FAVORITE_SUCCESS.isDisplayed());
+			System.out.println(FAVORITE_SUCCESS.getText());
+			delay(3000);
 			sleeper(1000);
+			js.javaClickWebElement(ADD_TO_CART, driver);
+			sleeper(2000);
 			if(ADDED_TO_CART.isDisplayed()) {
 			System.out.println("Item added to cart.");
 			}else{
 			System.out.println("Item not added to cart.");
-		}			
-		}else{
-		FAVORITE_BUTTON.click();
-		sleeper(2000);
-		assertTrue(FAVORITE_SUCCESS.isDisplayed());
-		System.out.println(FAVORITE_SUCCESS.getText());
-		js.javaClickWebElement(ADD_TO_CART, driver);
-		sleeper(2000);
-		if(ADDED_TO_CART.isDisplayed()) {
-		System.out.println("Item added to cart.");
-		}else{
-		System.out.println("Item not added to cart.");
 	}
 		}
-		}
 		
-
+		
 	public void go_to_cartpage() {
 		System.out.println("Total number of items in cart: "+NO_ITEMS_IN_CART.getText());
 		sleeper(2000);
-		System.out.println("Items in cart: "+ITEM_NAME_IN_WRAPPER.getText()+"\nSubtotal: "+CART_WRAPPER_SUBTOTAL.getText());
+		System.out.println("Items in cart: "+ITEM_NAME_IN_WRAPPER.getText()+"\n"+CART_WRAPPER_SUBTOTAL.getText());
 		VIEW_CART.click();
 		}
 	

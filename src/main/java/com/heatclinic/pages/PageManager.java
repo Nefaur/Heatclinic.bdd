@@ -10,6 +10,8 @@ public class PageManager {
 	private MemberPage member;
 	private SearchFunction search;
 	private ProductPage product;
+	private CartPage cart;
+	private CheckoutPage checkout;
 
 	private PageManager() {
 	}
@@ -38,12 +40,22 @@ public class PageManager {
 			return (product==null)? product=new ProductPage():product;
 		}
 		
+		public CartPage getCartPage() {
+			return (cart==null)? cart=new CartPage():cart;
+		}
+		
+		public CheckoutPage getCheckoutPage() {
+			return (checkout==null)? checkout=new CheckoutPage():checkout;
+		}
+		
 		public void closePages() {
 			home=null;
 			login=null;
 			member=null;
 			search=null;
 			product=null;
+			cart=null;
+			checkout=null;
 		}
 		
 }

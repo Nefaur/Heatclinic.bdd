@@ -1,7 +1,7 @@
 Feature: Invalid login function of www.heatclinic.com
 
- 
-@FunctionalTest @SmokeTest @SanityTest
+@FunctionalTest 
+@SmokeTest
 Scenario Outline: Testing the login functionality for invalid users
 
 Given Invalid User opens browser

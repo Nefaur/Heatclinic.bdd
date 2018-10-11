@@ -1,6 +1,8 @@
 package com.heatclinic.steps;
 
 
+import com.heatclinic.pages.CartPage;
+import com.heatclinic.pages.CheckoutPage;
 import com.heatclinic.pages.HomePage;
 import com.heatclinic.pages.LoginPage;
 import com.heatclinic.pages.MemberPage;
@@ -20,6 +22,8 @@ public class ValidCheckout extends TestBase {
 	private MemberPage member=PageManager.getInstance().getMember();
 	private SearchFunction search=PageManager.getInstance().getSearch();
 	private ProductPage product=PageManager.getInstance().getProductPage();
+	private CartPage cart=PageManager.getInstance().getCartPage();
+	private CheckoutPage checkout=PageManager.getInstance().getCheckoutPage();
 	
 	@Given("Existing Valid User opens browser")
 	public void existing_Valid_User_opens_browser() {
@@ -91,36 +95,34 @@ public class ValidCheckout extends TestBase {
 
 	@Then("Logged in User goes to checkout page")
 	public void logged_in_User_goes_to_checkout_page() {
-
+		cart.verify_Cartpage();
 	}
 
-	@Then("User increases the number of selected items to two.")
-	public void user_increases_the_number_of_selected_items_to_two() {
+	@Then("Logged in User increases the number of selected items to two and then decreases to one")
+	public void logged_in_user_increases_the_number_of_selected_items_to_two_and_then_decreases_to_one() {
+		cart.change_quantity("2");
+		cart.change_quantity("1");
+	}
 	
-	}
+	@Then("Logged in User clicks checkout button")
+	public void logged_in_User_clicks_checkout_button() {
+		cart.go_to_checkout();
+	}	
 
 	@Then("Logged in User fills in shipping information and clicks Continue")
-	public void logged_in_User_fills_in_shipping_information_and_clicks_Continue(io.cucumber.datatable.DataTable dataTable) {
-	    // Write code here that turns the phrase above into concrete actions
-	    // For automatic transformation, change DataTable to one of
-	    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
-	    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-	    // Double, Byte, Short, Long, BigInteger or BigDecimal.
-	    //
-	    // For other transformations you can register a DataTableType.
-	    throw new cucumber.api.PendingException();
+	public void logged_in_User_fills_in_shipping_information_and_clicks_Continue() {
+		checkout.verify_Checkoutpage();
+		checkout.enterShippingInfo();
 	}
 
 	@Then("Logged in User fills in payment information")
 	public void logged_in_User_fills_in_payment_information() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
+		checkout.paymentInfo();
 	}
 
 	@Then("Logged in User gets purchase confirmation notification")
 	public void logged_in_User_gets_purchase_confirmation_notification() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
+		checkout.order_Confirmation();
 	}
 
 	@Then("Logged in User logouts")

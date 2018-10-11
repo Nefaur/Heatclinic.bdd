@@ -8,12 +8,12 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="I:\\eclipse-workspace\\heatclinic.bdd\\src\\main\\resources\\TestResource\\Features\\Checkout.feature",
+		features="I:\\eclipse-workspace\\heatclinic.bdd\\src\\main\\resources\\TestResource\\Features\\InvalidLogin.feature",
 		glue= {"com.heatclinic.steps"},
 //		dryRun=true,
 		strict=true,
 		monochrome=true,
-//		tags= {"@FunctionalTest", "@SmokeTest"},
+//		tags= {"@FunctionalTest", "not @SmokeTest", "not @SanityTest","not @End2EndTests"},
 		plugin={
                 "pretty:target/cucumber-test-report/cucumber-pretty.txt",
                 "html:target/cucumber-test-report",
