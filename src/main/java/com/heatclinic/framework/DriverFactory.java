@@ -33,12 +33,12 @@ public class DriverFactory {
 		
 	}
 	
-	public static DriverFactory initialize() {
+	public static DriverFactory initialize(){
 				
 		return initialize(null);
 	}
 	
-	public static DriverFactory initialize(String browser) {
+	public static DriverFactory initialize(String browser){
 		if(instance == null) {
 			instance = new DriverFactory();
 		}
@@ -88,16 +88,19 @@ public class DriverFactory {
 				
 			case "ff-grid":
 				caps = new DesiredCapabilities();
-		        caps.setPlatform(Platform.WIN10);
+		        caps.setPlatform(Platform.ANY);
 		        caps.setBrowserName("firefox");
 		        caps.setCapability("marionette", true);
+		        System.out.println("Trying to set driver.");
 		        try {
 					driver=new RemoteWebDriver(new URL(Hub_URL), caps);
 					instance.driverBase.set(driver);
+					System.out.println("Driver set.");
 				} catch (MalformedURLException e) {
+					System.out.println("Unable to set driver.");
 					e.printStackTrace();
 				}
-			break;
+		        break;
 			
 			case "ie-grid":
 				caps = new DesiredCapabilities();
@@ -110,6 +113,7 @@ public class DriverFactory {
 				} catch (MalformedURLException e) {
 					e.printStackTrace();
 				}
+		        break;
 		        
 			case "ch-cloud":
 				caps = new DesiredCapabilities();
@@ -124,7 +128,7 @@ public class DriverFactory {
 				} catch (MalformedURLException e) {
 					e.printStackTrace();
 				}
-			break;
+			    break;
 			
 			case "safari-mac-cloud":
 				caps = new DesiredCapabilities();
@@ -140,7 +144,7 @@ public class DriverFactory {
 				} catch (MalformedURLException e) {
 					e.printStackTrace();
 				}
-			break;
+			    break;
 			
 			case "ff-cloud":
 				caps = new DesiredCapabilities();
@@ -155,7 +159,7 @@ public class DriverFactory {
 				} catch (MalformedURLException e) {
 					e.printStackTrace();
 				}
-			break;
+			    break;
 			
 			case "":
 				ChromeDriverManager.getInstance().arch32().setup();
@@ -164,7 +168,7 @@ public class DriverFactory {
 				options1.addArguments("headless");
 				driver=new ChromeDriver(options1);
 				instance.driverBase.set(driver);
-			break;
+				break;
 				
 			default:
 			break;
@@ -181,7 +185,7 @@ public class DriverFactory {
 	}
 	
 	public void tearDown() {
-		driverBase.get().close();
+//		driverBase.get().close();
 		driverBase.get().quit();
 		driverBase.remove();
 		driverBase.set(null);

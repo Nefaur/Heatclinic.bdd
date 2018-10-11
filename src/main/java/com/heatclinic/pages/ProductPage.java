@@ -1,8 +1,8 @@
 package com.heatclinic.pages;
 
-import static org.junit.Assert.assertTrue;
-
+//import static org.junit.Assert.assertTrue;
 import java.util.concurrent.TimeUnit;
+//import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -83,12 +83,17 @@ public class ProductPage {
 	
 	public void addToCart() {
 		delay(2000);
-			FAVORITE_BUTTON.click();
-			sleeper(2000);
-			assertTrue(FAVORITE_SUCCESS.isDisplayed());
-			System.out.println(FAVORITE_SUCCESS.getText());
-			delay(3000);
-			sleeper(1000);
+//		try {
+//			delay(2000);
+//				FAVORITE_BUTTON.click();
+//				sleeper(2000);
+//				assertTrue(FAVORITE_SUCCESS.isDisplayed());
+//				System.out.println(FAVORITE_SUCCESS.getText());
+//				delay(3000);
+//				sleeper(1000);
+//		} catch (ElementNotVisibleException e) {
+//			e.printStackTrace();
+//		}
 			js.javaClickWebElement(ADD_TO_CART, driver);
 			sleeper(2000);
 			if(ADDED_TO_CART.isDisplayed()) {
