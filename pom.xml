@@ -168,7 +168,7 @@
                         <configuration>
                             <!-- Mandatory -->
                             <!-- comma separated list of package names to scan for glue code -->
-                            <glue>com.giftcards.steps</glue>
+                            <glue>com.heatclinic.steps</glue>
                             <outputDirectory>${project.build.directory}/generated-test-sources/cucumber</outputDirectory>
                             <!-- The directory, which must be in the root of the runtime classpath, containing your feature files.  -->
                             <featuresDirectory>src/test/resources/features/</featuresDirectory>

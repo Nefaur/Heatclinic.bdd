@@ -124,7 +124,8 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_goes_to_website(String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.NullPointerException\r\n\tat com.heatclinic.pages.HomePage.delay(HomePage.java:69)\r\n\tat com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)\r\n\tat com.heatclinic.steps.Invalidlogin.invalid_user_goes_to_website(Invalidlogin.java:26)\r\n\tat ✽.Invalid User goes to \"https://demo.broadleafcommerce.org/\" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature:8)\r\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "Invalid User hovers to sign_in_link",
@@ -134,7 +135,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_hovers_to_sign_in_link()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User clicks sign_in_link",
@@ -144,7 +145,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_clicks_sign_in_link()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User enters \"moltenboy.robin@gmail.com\" as username",
@@ -154,7 +155,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_User_enters_as_username(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User enters \"123456789\" as password",
@@ -164,7 +165,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_User_enters_as_password(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User clicks on submit button",
@@ -174,7 +175,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_User_clicks_on_submit_button()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User gets failed login message",
@@ -184,7 +185,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_gets_failed_login_message()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User closes browser",
@@ -194,7 +195,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_closes_browser()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.after({
   "status": "passed"
@@ -233,7 +234,8 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_goes_to_website(String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.NullPointerException\r\n\tat com.heatclinic.pages.HomePage.delay(HomePage.java:69)\r\n\tat com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)\r\n\tat com.heatclinic.steps.Invalidlogin.invalid_user_goes_to_website(Invalidlogin.java:26)\r\n\tat ✽.Invalid User goes to \"https://demo.broadleafcommerce.org/\" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature:8)\r\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "Invalid User hovers to sign_in_link",
@@ -243,7 +245,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_hovers_to_sign_in_link()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User clicks sign_in_link",
@@ -253,7 +255,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_clicks_sign_in_link()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User enters \"moltenboy@gmail.com\" as username",
@@ -263,7 +265,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_User_enters_as_username(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User enters \"A1234567@\" as password",
@@ -273,7 +275,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_User_enters_as_password(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User clicks on submit button",
@@ -283,7 +285,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_User_clicks_on_submit_button()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User gets failed login message",
@@ -293,7 +295,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_gets_failed_login_message()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User closes browser",
@@ -303,7 +305,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_closes_browser()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.after({
   "status": "passed"
@@ -342,7 +344,8 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_goes_to_website(String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.NullPointerException\r\n\tat com.heatclinic.pages.HomePage.delay(HomePage.java:69)\r\n\tat com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)\r\n\tat com.heatclinic.steps.Invalidlogin.invalid_user_goes_to_website(Invalidlogin.java:26)\r\n\tat ✽.Invalid User goes to \"https://demo.broadleafcommerce.org/\" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature:8)\r\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "Invalid User hovers to sign_in_link",
@@ -352,7 +355,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_hovers_to_sign_in_link()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User clicks sign_in_link",
@@ -362,7 +365,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_clicks_sign_in_link()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User enters \"moltenboy@gmail.com\" as username",
@@ -372,7 +375,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_User_enters_as_username(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User enters \"\" as password",
@@ -382,7 +385,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_User_enters_as_password(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User clicks on submit button",
@@ -392,7 +395,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_User_clicks_on_submit_button()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User gets failed login message",
@@ -402,7 +405,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_gets_failed_login_message()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User closes browser",
@@ -412,7 +415,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_closes_browser()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.after({
   "status": "passed"
@@ -451,7 +454,8 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_goes_to_website(String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.NullPointerException\r\n\tat com.heatclinic.pages.HomePage.delay(HomePage.java:69)\r\n\tat com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)\r\n\tat com.heatclinic.steps.Invalidlogin.invalid_user_goes_to_website(Invalidlogin.java:26)\r\n\tat ✽.Invalid User goes to \"https://demo.broadleafcommerce.org/\" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature:8)\r\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "Invalid User hovers to sign_in_link",
@@ -461,7 +465,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_hovers_to_sign_in_link()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User clicks sign_in_link",
@@ -471,7 +475,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_clicks_sign_in_link()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User enters \"\" as username",
@@ -481,7 +485,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_User_enters_as_username(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User enters \"A1234567@\" as password",
@@ -491,7 +495,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_User_enters_as_password(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User clicks on submit button",
@@ -501,7 +505,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_User_clicks_on_submit_button()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User gets failed login message",
@@ -511,7 +515,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_gets_failed_login_message()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Invalid User closes browser",
@@ -521,7 +525,7 @@ formatter.match({
   "location": "Invalidlogin.invalid_user_closes_browser()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.after({
   "status": "passed"
@@ -566,7 +570,8 @@ formatter.match({
   "location": "SearchWebsite.valid_User_goes_to_website(String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.NullPointerException\r\n\tat com.heatclinic.pages.HomePage.delay(HomePage.java:69)\r\n\tat com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)\r\n\tat com.heatclinic.steps.SearchWebsite.valid_User_goes_to_website(SearchWebsite.java:30)\r\n\tat ✽.Valid User goes to \"https://demo.broadleafcommerce.org/\" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/SearchTest.feature:8)\r\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "Valid User hovers to sign_in_link",
@@ -576,7 +581,7 @@ formatter.match({
   "location": "SearchWebsite.valid_User_hovers_to_sign_in_link()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Valid User clicks sign_in_link",
@@ -586,7 +591,7 @@ formatter.match({
   "location": "SearchWebsite.valid_User_clicks_sign_in_link()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Valid User enters usercredentials in login text fields",
@@ -604,7 +609,7 @@ formatter.match({
   "location": "SearchWebsite.valid_User_enters_usercredentials_in_login_text_fields(DataTable)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Valid User clicks on submit button",
@@ -614,7 +619,7 @@ formatter.match({
   "location": "SearchWebsite.valid_User_clicks_on_submit_button()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Valid User is taken to member page",
@@ -624,7 +629,7 @@ formatter.match({
   "location": "SearchWebsite.valid_User_is_taken_to_member_page()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Valid User enters text in search field",
@@ -646,7 +651,7 @@ formatter.match({
   "location": "SearchWebsite.valid_User_enters_text_in_search_field(DataTable)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Valid User chooses the selection from search box field",
@@ -656,7 +661,7 @@ formatter.match({
   "location": "SearchWebsite.valid_User_chooses_the_selection_from_search_box_field()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Valid User filters the selection by choosing price range",
@@ -666,7 +671,7 @@ formatter.match({
   "location": "SearchWebsite.valid_User_filters_the_selection_by_choosing_price_range()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Valid User clicks on third selection from search result",
@@ -676,7 +681,7 @@ formatter.match({
   "location": "SearchWebsite.valid_User_clicks_on_third_selection_from_search_result()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Valid User logouts",
@@ -686,7 +691,7 @@ formatter.match({
   "location": "SearchWebsite.valid_User_logouts()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Valid User closes browser",
@@ -696,7 +701,7 @@ formatter.match({
   "location": "SearchWebsite.valid_User_closes_browser()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.after({
   "status": "passed"
@@ -744,7 +749,8 @@ formatter.match({
   "location": "Validlogin.user_goes_to_website(String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.NullPointerException\r\n\tat com.heatclinic.pages.HomePage.delay(HomePage.java:69)\r\n\tat com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)\r\n\tat com.heatclinic.steps.Validlogin.user_goes_to_website(Validlogin.java:28)\r\n\tat ✽.User goes to \"https://demo.broadleafcommerce.org/\" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/ValidLogin.feature:10)\r\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "User hovers to sign_in_link",
@@ -754,7 +760,7 @@ formatter.match({
   "location": "Validlogin.user_hovers_to_sign_in_link()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "User clicks sign_in_link",
@@ -764,7 +770,7 @@ formatter.match({
   "location": "Validlogin.user_clicks_sign_in_link()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "User enters \"moltenboy.robin@gmail.com\" as username",
@@ -774,7 +780,7 @@ formatter.match({
   "location": "Validlogin.user_enters_as_username(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "User enters \"A1234567@\" as password",
@@ -784,7 +790,7 @@ formatter.match({
   "location": "Validlogin.user_enters_as_password(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "User clicks on submit button",
@@ -794,7 +800,7 @@ formatter.match({
   "location": "Validlogin.user_clicks_on_submit_button()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "User is taken to member page",
@@ -804,7 +810,7 @@ formatter.match({
   "location": "Validlogin.user_is_taken_to_member_page()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "User logsout",
@@ -814,7 +820,7 @@ formatter.match({
   "location": "Validlogin.user_logsout()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "User closes browser",
@@ -824,7 +830,7 @@ formatter.match({
   "location": "Validlogin.user_closes_browser()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.after({
   "status": "passed"
@@ -869,7 +875,8 @@ formatter.match({
   "location": "ValidCheckout.existing_Valid_User_goes_to_website(String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.NullPointerException\r\n\tat com.heatclinic.pages.HomePage.delay(HomePage.java:69)\r\n\tat com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)\r\n\tat com.heatclinic.steps.ValidCheckout.existing_Valid_User_goes_to_website(ValidCheckout.java:35)\r\n\tat ✽.Existing Valid User goes to \"https://demo.broadleafcommerce.org/\" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/ValidUserCheckout.feature:8)\r\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "Existing Valid User hovers to sign_in_link",
@@ -879,7 +886,7 @@ formatter.match({
   "location": "ValidCheckout.existing_Valid_User_hovers_to_sign_in_link()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Existing Valid User clicks sign_in_link",
@@ -889,7 +896,7 @@ formatter.match({
   "location": "ValidCheckout.existing_Valid_User_clicks_sign_in_link()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Existing Valid User enters username and password in login text fields",
@@ -907,7 +914,7 @@ formatter.match({
   "location": "ValidCheckout.existing_Valid_User_enters_username_and_password_in_login_text_fields(DataTable)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Existing Valid User clicks on submit button",
@@ -917,7 +924,7 @@ formatter.match({
   "location": "ValidCheckout.existing_Valid_User_clicks_on_submit_button()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Existing Valid User is taken to member page",
@@ -927,7 +934,7 @@ formatter.match({
   "location": "ValidCheckout.existing_Valid_User_is_taken_to_member_page()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Existing Valid User enters text in search field",
@@ -949,7 +956,7 @@ formatter.match({
   "location": "ValidCheckout.existing_Valid_User_enters_text_in_search_field(DataTable)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Logged in User chooses the selection from search box field",
@@ -959,7 +966,7 @@ formatter.match({
   "location": "ValidCheckout.logged_in_User_chooses_the_selection_from_search_box_field()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Logged in User filters the selection by choosing price range",
@@ -969,7 +976,7 @@ formatter.match({
   "location": "ValidCheckout.logged_in_User_filters_the_selection_by_choosing_price_range()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Logged in User clicks on a selection from search result",
@@ -979,7 +986,7 @@ formatter.match({
   "location": "ValidCheckout.logged_in_User_clicks_on_a_selection_from_search_result()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Logged in User clicks add to cart",
@@ -989,7 +996,7 @@ formatter.match({
   "location": "ValidCheckout.logged_in_User_clicks_add_to_cart()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Logged in User goes to view cart page",
@@ -999,7 +1006,7 @@ formatter.match({
   "location": "ValidCheckout.logged_in_User_goes_to_view_cart_page()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Logged in User goes to checkout page",
@@ -1009,7 +1016,7 @@ formatter.match({
   "location": "ValidCheckout.logged_in_User_goes_to_checkout_page()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Logged in User increases the number of selected items to two and then decreases to one",
@@ -1019,7 +1026,7 @@ formatter.match({
   "location": "ValidCheckout.logged_in_user_increases_the_number_of_selected_items_to_two_and_then_decreases_to_one()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Logged in User clicks checkout button",
@@ -1029,7 +1036,7 @@ formatter.match({
   "location": "ValidCheckout.logged_in_User_clicks_checkout_button()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Logged in User fills in shipping information and clicks Continue",
@@ -1039,7 +1046,7 @@ formatter.match({
   "location": "ValidCheckout.logged_in_User_fills_in_shipping_information_and_clicks_Continue()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Logged in User fills in payment information",
@@ -1049,7 +1056,7 @@ formatter.match({
   "location": "ValidCheckout.logged_in_User_fills_in_payment_information()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Logged in User gets purchase confirmation notification",
@@ -1059,7 +1066,7 @@ formatter.match({
   "location": "ValidCheckout.logged_in_User_gets_purchase_confirmation_notification()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Logged in User logouts",
@@ -1069,7 +1076,7 @@ formatter.match({
   "location": "ValidCheckout.logged_in_User_logouts()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "Logged out User closes browser",
@@ -1079,7 +1086,7 @@ formatter.match({
   "location": "ValidCheckout.logged_out_User_closes_browser()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.after({
   "status": "passed"

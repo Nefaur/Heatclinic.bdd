@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 5143755406,
+              "duration": 5767309321,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 570257317,
+              "duration": 555691023,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 22627257,
+              "duration": 20577373,
               "status": "passed"
             },
             "line": 7,
@@ -46,8 +46,9 @@
           },
           {
             "result": {
-              "duration": 798487640,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException\r\n\tat com.heatclinic.pages.HomePage.delay(HomePage.java:69)\r\n\tat com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)\r\n\tat com.heatclinic.steps.Invalidlogin.invalid_user_goes_to_website(Invalidlogin.java:26)\r\n\tat ✽.Invalid User goes to \"https://demo.broadleafcommerce.org/\" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature:8)\r\n",
+              "duration": 1410640,
+              "status": "failed"
             },
             "line": 8,
             "name": "Invalid User goes to \"https://demo.broadleafcommerce.org/\" website",
@@ -64,8 +65,8 @@
           },
           {
             "result": {
-              "duration": 160162027,
-              "status": "passed"
+              "duration": 22655,
+              "status": "skipped"
             },
             "line": 9,
             "name": "Invalid User hovers to sign_in_link",
@@ -76,8 +77,8 @@
           },
           {
             "result": {
-              "duration": 360059854,
-              "status": "passed"
+              "duration": 11705,
+              "status": "skipped"
             },
             "line": 10,
             "name": "Invalid User clicks sign_in_link",
@@ -88,8 +89,8 @@
           },
           {
             "result": {
-              "duration": 253856323,
-              "status": "passed"
+              "duration": 13215,
+              "status": "skipped"
             },
             "line": 11,
             "name": "Invalid User enters \"moltenboy.robin@gmail.com\" as username",
@@ -106,8 +107,8 @@
           },
           {
             "result": {
-              "duration": 97874110,
-              "status": "passed"
+              "duration": 7929,
+              "status": "skipped"
             },
             "line": 12,
             "name": "Invalid User enters \"123456789\" as password",
@@ -124,8 +125,8 @@
           },
           {
             "result": {
-              "duration": 251668999,
-              "status": "passed"
+              "duration": 7929,
+              "status": "skipped"
             },
             "line": 13,
             "name": "Invalid User clicks on submit button",
@@ -136,8 +137,8 @@
           },
           {
             "result": {
-              "duration": 71264135,
-              "status": "passed"
+              "duration": 7929,
+              "status": "skipped"
             },
             "line": 14,
             "name": "Invalid User gets failed login message",
@@ -148,8 +149,8 @@
           },
           {
             "result": {
-              "duration": 132153,
-              "status": "passed"
+              "duration": 7551,
+              "status": "skipped"
             },
             "line": 15,
             "name": "Invalid User closes browser",
@@ -172,7 +173,7 @@
         "before": [
           {
             "result": {
-              "duration": 3665738322,
+              "duration": 4344736511,
               "status": "passed"
             },
             "match": {
@@ -187,7 +188,7 @@
         "after": [
           {
             "result": {
-              "duration": 561911281,
+              "duration": 547508102,
               "status": "passed"
             },
             "match": {
@@ -200,7 +201,7 @@
         "steps": [
           {
             "result": {
-              "duration": 497651,
+              "duration": 72495,
               "status": "passed"
             },
             "line": 7,
@@ -212,8 +213,9 @@
           },
           {
             "result": {
-              "duration": 907028771,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException\r\n\tat com.heatclinic.pages.HomePage.delay(HomePage.java:69)\r\n\tat com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)\r\n\tat com.heatclinic.steps.Invalidlogin.invalid_user_goes_to_website(Invalidlogin.java:26)\r\n\tat ✽.Invalid User goes to \"https://demo.broadleafcommerce.org/\" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature:8)\r\n",
+              "duration": 318678,
+              "status": "failed"
             },
             "line": 8,
             "name": "Invalid User goes to \"https://demo.broadleafcommerce.org/\" website",
@@ -230,8 +232,8 @@
           },
           {
             "result": {
-              "duration": 145331049,
-              "status": "passed"
+              "duration": 17369,
+              "status": "skipped"
             },
             "line": 9,
             "name": "Invalid User hovers to sign_in_link",
@@ -242,8 +244,8 @@
           },
           {
             "result": {
-              "duration": 301379716,
-              "status": "passed"
+              "duration": 14348,
+              "status": "skipped"
             },
             "line": 10,
             "name": "Invalid User clicks sign_in_link",
@@ -254,8 +256,8 @@
           },
           {
             "result": {
-              "duration": 183962426,
-              "status": "passed"
+              "duration": 9062,
+              "status": "skipped"
             },
             "line": 11,
             "name": "Invalid User enters \"moltenboy@gmail.com\" as username",
@@ -272,8 +274,8 @@
           },
           {
             "result": {
-              "duration": 107185996,
-              "status": "passed"
+              "duration": 8307,
+              "status": "skipped"
             },
             "line": 12,
             "name": "Invalid User enters \"A1234567@\" as password",
@@ -290,8 +292,8 @@
           },
           {
             "result": {
-              "duration": 248699330,
-              "status": "passed"
+              "duration": 11705,
+              "status": "skipped"
             },
             "line": 13,
             "name": "Invalid User clicks on submit button",
@@ -302,8 +304,8 @@
           },
           {
             "result": {
-              "duration": 69696044,
-              "status": "passed"
+              "duration": 7929,
+              "status": "skipped"
             },
             "line": 14,
             "name": "Invalid User gets failed login message",
@@ -314,8 +316,8 @@
           },
           {
             "result": {
-              "duration": 154808,
-              "status": "passed"
+              "duration": 7929,
+              "status": "skipped"
             },
             "line": 15,
             "name": "Invalid User closes browser",
@@ -338,7 +340,7 @@
         "before": [
           {
             "result": {
-              "duration": 3638834591,
+              "duration": 4317469169,
               "status": "passed"
             },
             "match": {
@@ -353,7 +355,7 @@
         "after": [
           {
             "result": {
-              "duration": 558458687,
+              "duration": 564482226,
               "status": "passed"
             },
             "match": {
@@ -366,7 +368,7 @@
         "steps": [
           {
             "result": {
-              "duration": 356436,
+              "duration": 72873,
               "status": "passed"
             },
             "line": 7,
@@ -378,8 +380,9 @@
           },
           {
             "result": {
-              "duration": 823901440,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException\r\n\tat com.heatclinic.pages.HomePage.delay(HomePage.java:69)\r\n\tat com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)\r\n\tat com.heatclinic.steps.Invalidlogin.invalid_user_goes_to_website(Invalidlogin.java:26)\r\n\tat ✽.Invalid User goes to \"https://demo.broadleafcommerce.org/\" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature:8)\r\n",
+              "duration": 284696,
+              "status": "failed"
             },
             "line": 8,
             "name": "Invalid User goes to \"https://demo.broadleafcommerce.org/\" website",
@@ -396,8 +399,8 @@
           },
           {
             "result": {
-              "duration": 113715492,
-              "status": "passed"
+              "duration": 14725,
+              "status": "skipped"
             },
             "line": 9,
             "name": "Invalid User hovers to sign_in_link",
@@ -408,8 +411,8 @@
           },
           {
             "result": {
-              "duration": 250202100,
-              "status": "passed"
+              "duration": 15481,
+              "status": "skipped"
             },
             "line": 10,
             "name": "Invalid User clicks sign_in_link",
@@ -420,8 +423,8 @@
           },
           {
             "result": {
-              "duration": 161724832,
-              "status": "passed"
+              "duration": 7929,
+              "status": "skipped"
             },
             "line": 11,
             "name": "Invalid User enters \"moltenboy@gmail.com\" as username",
@@ -438,8 +441,8 @@
           },
           {
             "result": {
-              "duration": 69023573,
-              "status": "passed"
+              "duration": 11705,
+              "status": "skipped"
             },
             "line": 12,
             "name": "Invalid User enters \"\" as password",
@@ -456,8 +459,8 @@
           },
           {
             "result": {
-              "duration": 256559798,
-              "status": "passed"
+              "duration": 5663,
+              "status": "skipped"
             },
             "line": 13,
             "name": "Invalid User clicks on submit button",
@@ -468,8 +471,8 @@
           },
           {
             "result": {
-              "duration": 66418647,
-              "status": "passed"
+              "duration": 5287,
+              "status": "skipped"
             },
             "line": 14,
             "name": "Invalid User gets failed login message",
@@ -480,8 +483,8 @@
           },
           {
             "result": {
-              "duration": 148766,
-              "status": "passed"
+              "duration": 5286,
+              "status": "skipped"
             },
             "line": 15,
             "name": "Invalid User closes browser",
@@ -504,7 +507,7 @@
         "before": [
           {
             "result": {
-              "duration": 3642554135,
+              "duration": 4464124771,
               "status": "passed"
             },
             "match": {
@@ -519,7 +522,7 @@
         "after": [
           {
             "result": {
-              "duration": 578590138,
+              "duration": 559977692,
               "status": "passed"
             },
             "match": {
@@ -532,7 +535,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1070440,
+              "duration": 72495,
               "status": "passed"
             },
             "line": 7,
@@ -544,8 +547,9 @@
           },
           {
             "result": {
-              "duration": 839505324,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException\r\n\tat com.heatclinic.pages.HomePage.delay(HomePage.java:69)\r\n\tat com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)\r\n\tat com.heatclinic.steps.Invalidlogin.invalid_user_goes_to_website(Invalidlogin.java:26)\r\n\tat ✽.Invalid User goes to \"https://demo.broadleafcommerce.org/\" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature:8)\r\n",
+              "duration": 219375,
+              "status": "failed"
             },
             "line": 8,
             "name": "Invalid User goes to \"https://demo.broadleafcommerce.org/\" website",
@@ -562,8 +566,8 @@
           },
           {
             "result": {
-              "duration": 116129363,
-              "status": "passed"
+              "duration": 8307,
+              "status": "skipped"
             },
             "line": 9,
             "name": "Invalid User hovers to sign_in_link",
@@ -574,8 +578,8 @@
           },
           {
             "result": {
-              "duration": 241683510,
-              "status": "passed"
+              "duration": 7174,
+              "status": "skipped"
             },
             "line": 10,
             "name": "Invalid User clicks sign_in_link",
@@ -586,8 +590,8 @@
           },
           {
             "result": {
-              "duration": 80253946,
-              "status": "passed"
+              "duration": 5664,
+              "status": "skipped"
             },
             "line": 11,
             "name": "Invalid User enters \"\" as username",
@@ -604,8 +608,8 @@
           },
           {
             "result": {
-              "duration": 102300483,
-              "status": "passed"
+              "duration": 5663,
+              "status": "skipped"
             },
             "line": 12,
             "name": "Invalid User enters \"A1234567@\" as password",
@@ -622,8 +626,8 @@
           },
           {
             "result": {
-              "duration": 256633803,
-              "status": "passed"
+              "duration": 4908,
+              "status": "skipped"
             },
             "line": 13,
             "name": "Invalid User clicks on submit button",
@@ -634,8 +638,8 @@
           },
           {
             "result": {
-              "duration": 68692435,
-              "status": "passed"
+              "duration": 16991,
+              "status": "skipped"
             },
             "line": 14,
             "name": "Invalid User gets failed login message",
@@ -646,8 +650,8 @@
           },
           {
             "result": {
-              "duration": 63433,
-              "status": "passed"
+              "duration": 5664,
+              "status": "skipped"
             },
             "line": 15,
             "name": "Invalid User closes browser",
@@ -681,7 +685,7 @@
         "before": [
           {
             "result": {
-              "duration": 3729322851,
+              "duration": 4325445177,
               "status": "passed"
             },
             "match": {
@@ -696,7 +700,7 @@
         "after": [
           {
             "result": {
-              "duration": 573404827,
+              "duration": 546941353,
               "status": "passed"
             },
             "match": {
@@ -709,7 +713,7 @@
         "steps": [
           {
             "result": {
-              "duration": 9159722,
+              "duration": 6049970,
               "status": "passed"
             },
             "line": 7,
@@ -721,8 +725,9 @@
           },
           {
             "result": {
-              "duration": 827062164,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException\r\n\tat com.heatclinic.pages.HomePage.delay(HomePage.java:69)\r\n\tat com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)\r\n\tat com.heatclinic.steps.SearchWebsite.valid_User_goes_to_website(SearchWebsite.java:30)\r\n\tat ✽.Valid User goes to \"https://demo.broadleafcommerce.org/\" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/SearchTest.feature:8)\r\n",
+              "duration": 376070,
+              "status": "failed"
             },
             "line": 8,
             "name": "Valid User goes to \"https://demo.broadleafcommerce.org/\" website",
@@ -739,8 +744,8 @@
           },
           {
             "result": {
-              "duration": 113019234,
-              "status": "passed"
+              "duration": 12838,
+              "status": "skipped"
             },
             "line": 9,
             "name": "Valid User hovers to sign_in_link",
@@ -751,8 +756,8 @@
           },
           {
             "result": {
-              "duration": 237897512,
-              "status": "passed"
+              "duration": 9817,
+              "status": "skipped"
             },
             "line": 10,
             "name": "Valid User clicks sign_in_link",
@@ -763,8 +768,8 @@
           },
           {
             "result": {
-              "duration": 266843575,
-              "status": "passed"
+              "duration": 16613,
+              "status": "skipped"
             },
             "line": 11,
             "name": "Valid User enters usercredentials in login text fields",
@@ -783,8 +788,8 @@
           },
           {
             "result": {
-              "duration": 275256821,
-              "status": "passed"
+              "duration": 7551,
+              "status": "skipped"
             },
             "line": 13,
             "name": "Valid User clicks on submit button",
@@ -795,8 +800,8 @@
           },
           {
             "result": {
-              "duration": 52410416,
-              "status": "passed"
+              "duration": 6041,
+              "status": "skipped"
             },
             "line": 14,
             "name": "Valid User is taken to member page",
@@ -807,8 +812,8 @@
           },
           {
             "result": {
-              "duration": 73940047,
-              "status": "passed"
+              "duration": 4908,
+              "status": "skipped"
             },
             "line": 15,
             "name": "Valid User enters text in search field",
@@ -831,8 +836,8 @@
           },
           {
             "result": {
-              "duration": 832133823,
-              "status": "passed"
+              "duration": 4909,
+              "status": "skipped"
             },
             "line": 18,
             "name": "Valid User chooses the selection from search box field",
@@ -843,8 +848,8 @@
           },
           {
             "result": {
-              "duration": 7248884722,
-              "status": "passed"
+              "duration": 4908,
+              "status": "skipped"
             },
             "line": 19,
             "name": "Valid User filters the selection by choosing price range",
@@ -855,8 +860,8 @@
           },
           {
             "result": {
-              "duration": 5038315720,
-              "status": "passed"
+              "duration": 4909,
+              "status": "skipped"
             },
             "line": 20,
             "name": "Valid User clicks on third selection from search result",
@@ -867,8 +872,8 @@
           },
           {
             "result": {
-              "duration": 2332075487,
-              "status": "passed"
+              "duration": 6797,
+              "status": "skipped"
             },
             "line": 21,
             "name": "Valid User logouts",
@@ -879,8 +884,8 @@
           },
           {
             "result": {
-              "duration": 111386,
-              "status": "passed"
+              "duration": 4531,
+              "status": "skipped"
             },
             "line": 22,
             "name": "Valid User closes browser",
@@ -914,7 +919,7 @@
         "before": [
           {
             "result": {
-              "duration": 3675494621,
+              "duration": 4537362519,
               "status": "passed"
             },
             "match": {
@@ -929,7 +934,7 @@
         "after": [
           {
             "result": {
-              "duration": 566093739,
+              "duration": 566515874,
               "status": "passed"
             },
             "match": {
@@ -942,7 +947,7 @@
         "steps": [
           {
             "result": {
-              "duration": 674358,
+              "duration": 160849,
               "status": "passed"
             },
             "line": 9,
@@ -954,8 +959,9 @@
           },
           {
             "result": {
-              "duration": 847313686,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException\r\n\tat com.heatclinic.pages.HomePage.delay(HomePage.java:69)\r\n\tat com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)\r\n\tat com.heatclinic.steps.Validlogin.user_goes_to_website(Validlogin.java:28)\r\n\tat ✽.User goes to \"https://demo.broadleafcommerce.org/\" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/ValidLogin.feature:10)\r\n",
+              "duration": 320566,
+              "status": "failed"
             },
             "line": 10,
             "name": "User goes to \"https://demo.broadleafcommerce.org/\" website",
@@ -972,8 +978,8 @@
           },
           {
             "result": {
-              "duration": 108243976,
-              "status": "passed"
+              "duration": 12083,
+              "status": "skipped"
             },
             "line": 11,
             "name": "User hovers to sign_in_link",
@@ -984,8 +990,8 @@
           },
           {
             "result": {
-              "duration": 259709195,
-              "status": "passed"
+              "duration": 6796,
+              "status": "skipped"
             },
             "line": 12,
             "name": "User clicks sign_in_link",
@@ -996,8 +1002,8 @@
           },
           {
             "result": {
-              "duration": 220573749,
-              "status": "passed"
+              "duration": 6797,
+              "status": "skipped"
             },
             "line": 13,
             "name": "User enters \"moltenboy.robin@gmail.com\" as username",
@@ -1014,8 +1020,8 @@
           },
           {
             "result": {
-              "duration": 115055903,
-              "status": "passed"
+              "duration": 7174,
+              "status": "skipped"
             },
             "line": 14,
             "name": "User enters \"A1234567@\" as password",
@@ -1032,8 +1038,8 @@
           },
           {
             "result": {
-              "duration": 322716026,
-              "status": "passed"
+              "duration": 9062,
+              "status": "skipped"
             },
             "line": 15,
             "name": "User clicks on submit button",
@@ -1044,8 +1050,8 @@
           },
           {
             "result": {
-              "duration": 57666334,
-              "status": "passed"
+              "duration": 7174,
+              "status": "skipped"
             },
             "line": 16,
             "name": "User is taken to member page",
@@ -1056,8 +1062,8 @@
           },
           {
             "result": {
-              "duration": 2339887625,
-              "status": "passed"
+              "duration": 12460,
+              "status": "skipped"
             },
             "line": 17,
             "name": "User logsout",
@@ -1068,8 +1074,8 @@
           },
           {
             "result": {
-              "duration": 81558,
-              "status": "passed"
+              "duration": 7929,
+              "status": "skipped"
             },
             "line": 18,
             "name": "User closes browser",
@@ -1106,7 +1112,7 @@
         "before": [
           {
             "result": {
-              "duration": 3672799075,
+              "duration": 4433424468,
               "status": "passed"
             },
             "match": {
@@ -1121,7 +1127,7 @@
         "after": [
           {
             "result": {
-              "duration": 571226943,
+              "duration": 562440272,
               "status": "passed"
             },
             "match": {
@@ -1134,7 +1140,7 @@
         "steps": [
           {
             "result": {
-              "duration": 10980792,
+              "duration": 10154646,
               "status": "passed"
             },
             "line": 7,
@@ -1146,8 +1152,9 @@
           },
           {
             "result": {
-              "duration": 858476093,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException\r\n\tat com.heatclinic.pages.HomePage.delay(HomePage.java:69)\r\n\tat com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)\r\n\tat com.heatclinic.steps.ValidCheckout.existing_Valid_User_goes_to_website(ValidCheckout.java:35)\r\n\tat ✽.Existing Valid User goes to \"https://demo.broadleafcommerce.org/\" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/ValidUserCheckout.feature:8)\r\n",
+              "duration": 197852,
+              "status": "failed"
             },
             "line": 8,
             "name": "Existing Valid User goes to \"https://demo.broadleafcommerce.org/\" website",
@@ -1164,8 +1171,8 @@
           },
           {
             "result": {
-              "duration": 108492802,
-              "status": "passed"
+              "duration": 7174,
+              "status": "skipped"
             },
             "line": 9,
             "name": "Existing Valid User hovers to sign_in_link",
@@ -1176,8 +1183,8 @@
           },
           {
             "result": {
-              "duration": 243083200,
-              "status": "passed"
+              "duration": 6797,
+              "status": "skipped"
             },
             "line": 10,
             "name": "Existing Valid User clicks sign_in_link",
@@ -1188,8 +1195,8 @@
           },
           {
             "result": {
-              "duration": 266386326,
-              "status": "passed"
+              "duration": 5286,
+              "status": "skipped"
             },
             "line": 11,
             "name": "Existing Valid User enters username and password in login text fields",
@@ -1208,8 +1215,8 @@
           },
           {
             "result": {
-              "duration": 346824908,
-              "status": "passed"
+              "duration": 6041,
+              "status": "skipped"
             },
             "line": 13,
             "name": "Existing Valid User clicks on submit button",
@@ -1220,8 +1227,8 @@
           },
           {
             "result": {
-              "duration": 45636625,
-              "status": "passed"
+              "duration": 7552,
+              "status": "skipped"
             },
             "line": 14,
             "name": "Existing Valid User is taken to member page",
@@ -1232,8 +1239,8 @@
           },
           {
             "result": {
-              "duration": 65686896,
-              "status": "passed"
+              "duration": 10573,
+              "status": "skipped"
             },
             "line": 15,
             "name": "Existing Valid User enters text in search field",
@@ -1256,8 +1263,8 @@
           },
           {
             "result": {
-              "duration": 866449458,
-              "status": "passed"
+              "duration": 6797,
+              "status": "skipped"
             },
             "line": 18,
             "name": "Logged in User chooses the selection from search box field",
@@ -1268,8 +1275,8 @@
           },
           {
             "result": {
-              "duration": 7276389939,
-              "status": "passed"
+              "duration": 6041,
+              "status": "skipped"
             },
             "line": 19,
             "name": "Logged in User filters the selection by choosing price range",
@@ -1280,8 +1287,8 @@
           },
           {
             "result": {
-              "duration": 5424549821,
-              "status": "passed"
+              "duration": 4909,
+              "status": "skipped"
             },
             "line": 20,
             "name": "Logged in User clicks on a selection from search result",
@@ -1292,8 +1299,8 @@
           },
           {
             "result": {
-              "duration": 2065006119,
-              "status": "passed"
+              "duration": 5287,
+              "status": "skipped"
             },
             "line": 21,
             "name": "Logged in User clicks add to cart",
@@ -1304,8 +1311,8 @@
           },
           {
             "result": {
-              "duration": 2575774899,
-              "status": "passed"
+              "duration": 5286,
+              "status": "skipped"
             },
             "line": 22,
             "name": "Logged in User goes to view cart page",
@@ -1316,8 +1323,8 @@
           },
           {
             "result": {
-              "duration": 14098095,
-              "status": "passed"
+              "duration": 6041,
+              "status": "skipped"
             },
             "line": 23,
             "name": "Logged in User goes to checkout page",
@@ -1328,8 +1335,8 @@
           },
           {
             "result": {
-              "duration": 10656470991,
-              "status": "passed"
+              "duration": 4909,
+              "status": "skipped"
             },
             "line": 24,
             "name": "Logged in User increases the number of selected items to two and then decreases to one",
@@ -1340,8 +1347,8 @@
           },
           {
             "result": {
-              "duration": 280017353,
-              "status": "passed"
+              "duration": 4531,
+              "status": "skipped"
             },
             "line": 25,
             "name": "Logged in User clicks checkout button",
@@ -1352,8 +1359,8 @@
           },
           {
             "result": {
-              "duration": 5631489520,
-              "status": "passed"
+              "duration": 11705,
+              "status": "skipped"
             },
             "line": 26,
             "name": "Logged in User fills in shipping information and clicks Continue",
@@ -1364,8 +1371,8 @@
           },
           {
             "result": {
-              "duration": 10886329439,
-              "status": "passed"
+              "duration": 4908,
+              "status": "skipped"
             },
             "line": 27,
             "name": "Logged in User fills in payment information",
@@ -1376,8 +1383,8 @@
           },
           {
             "result": {
-              "duration": 1604200657,
-              "status": "passed"
+              "duration": 4909,
+              "status": "skipped"
             },
             "line": 28,
             "name": "Logged in User gets purchase confirmation notification",
@@ -1388,8 +1395,8 @@
           },
           {
             "result": {
-              "duration": 2311396545,
-              "status": "passed"
+              "duration": 5286,
+              "status": "skipped"
             },
             "line": 29,
             "name": "Logged in User logouts",
@@ -1400,8 +1407,8 @@
           },
           {
             "result": {
-              "duration": 90242,
-              "status": "passed"
+              "duration": 4908,
+              "status": "skipped"
             },
             "line": 30,
             "name": "Logged out User closes browser",
