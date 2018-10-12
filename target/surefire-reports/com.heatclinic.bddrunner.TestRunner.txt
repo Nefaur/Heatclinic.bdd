@@ -1,25 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.heatclinic.bddrunner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 37.185 s <<< FAILURE! - in com.heatclinic.bddrunner.TestRunner
-Testing the login functionality for invalid users(Invalid login function of www.heatclinic.com)  Time elapsed: 6.362 s  <<< ERROR!
-java.lang.NullPointerException
-
-Testing the login functionality for invalid users(Invalid login function of www.heatclinic.com)  Time elapsed: 4.895 s  <<< ERROR!
-java.lang.NullPointerException
-
-Testing the login functionality for invalid users(Invalid login function of www.heatclinic.com)  Time elapsed: 4.884 s  <<< ERROR!
-java.lang.NullPointerException
-
-Testing the login functionality for invalid users(Invalid login function of www.heatclinic.com)  Time elapsed: 5.027 s  <<< ERROR!
-java.lang.NullPointerException
-
-Testing the search functionality for valid users(Search function of www.heatclinic.com)  Time elapsed: 4.877 s  <<< ERROR!
-java.lang.NullPointerException
-
-User enters valids username and password to enter authorized login homepage(Login function test of www.heatclinic.com)  Time elapsed: 5.108 s  <<< ERROR!
-java.lang.NullPointerException
-
-Testing the checkout page functionality for valid users(Checkout page function of www.heatclinic.com)  Time elapsed: 5.01 s  <<< ERROR!
-java.lang.NullPointerException
-
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 211.889 s - in com.heatclinic.bddrunner.TestRunner

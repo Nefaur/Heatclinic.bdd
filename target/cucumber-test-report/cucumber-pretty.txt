@@ -18,12 +18,6 @@ Feature: Invalid login function of www.heatclinic.com
   Scenario Outline: Testing the login functionality for invalid users       # I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature:19
     Given Invalid User opens browser                                        # Invalidlogin.invalid_user_opens_browser()
     When Invalid User goes to "https://demo.broadleafcommerce.org/" website # Invalidlogin.invalid_user_goes_to_website(String)
-      java.lang.NullPointerException
-	at com.heatclinic.pages.HomePage.delay(HomePage.java:69)
-	at com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)
-	at com.heatclinic.steps.Invalidlogin.invalid_user_goes_to_website(Invalidlogin.java:26)
-	at ✽.Invalid User goes to "https://demo.broadleafcommerce.org/" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature:8)
-
     Then Invalid User hovers to sign_in_link                                # Invalidlogin.invalid_user_hovers_to_sign_in_link()
     Then Invalid User clicks sign_in_link                                   # Invalidlogin.invalid_user_clicks_sign_in_link()
     Then Invalid User enters "moltenboy.robin@gmail.com" as username        # Invalidlogin.invalid_User_enters_as_username(String)
@@ -36,12 +30,6 @@ Feature: Invalid login function of www.heatclinic.com
   Scenario Outline: Testing the login functionality for invalid users       # I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature:20
     Given Invalid User opens browser                                        # Invalidlogin.invalid_user_opens_browser()
     When Invalid User goes to "https://demo.broadleafcommerce.org/" website # Invalidlogin.invalid_user_goes_to_website(String)
-      java.lang.NullPointerException
-	at com.heatclinic.pages.HomePage.delay(HomePage.java:69)
-	at com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)
-	at com.heatclinic.steps.Invalidlogin.invalid_user_goes_to_website(Invalidlogin.java:26)
-	at ✽.Invalid User goes to "https://demo.broadleafcommerce.org/" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature:8)
-
     Then Invalid User hovers to sign_in_link                                # Invalidlogin.invalid_user_hovers_to_sign_in_link()
     Then Invalid User clicks sign_in_link                                   # Invalidlogin.invalid_user_clicks_sign_in_link()
     Then Invalid User enters "moltenboy@gmail.com" as username              # Invalidlogin.invalid_User_enters_as_username(String)
@@ -54,12 +42,6 @@ Feature: Invalid login function of www.heatclinic.com
   Scenario Outline: Testing the login functionality for invalid users       # I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature:21
     Given Invalid User opens browser                                        # Invalidlogin.invalid_user_opens_browser()
     When Invalid User goes to "https://demo.broadleafcommerce.org/" website # Invalidlogin.invalid_user_goes_to_website(String)
-      java.lang.NullPointerException
-	at com.heatclinic.pages.HomePage.delay(HomePage.java:69)
-	at com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)
-	at com.heatclinic.steps.Invalidlogin.invalid_user_goes_to_website(Invalidlogin.java:26)
-	at ✽.Invalid User goes to "https://demo.broadleafcommerce.org/" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature:8)
-
     Then Invalid User hovers to sign_in_link                                # Invalidlogin.invalid_user_hovers_to_sign_in_link()
     Then Invalid User clicks sign_in_link                                   # Invalidlogin.invalid_user_clicks_sign_in_link()
     Then Invalid User enters "moltenboy@gmail.com" as username              # Invalidlogin.invalid_User_enters_as_username(String)
@@ -72,12 +54,6 @@ Feature: Invalid login function of www.heatclinic.com
   Scenario Outline: Testing the login functionality for invalid users       # I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature:22
     Given Invalid User opens browser                                        # Invalidlogin.invalid_user_opens_browser()
     When Invalid User goes to "https://demo.broadleafcommerce.org/" website # Invalidlogin.invalid_user_goes_to_website(String)
-      java.lang.NullPointerException
-	at com.heatclinic.pages.HomePage.delay(HomePage.java:69)
-	at com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)
-	at com.heatclinic.steps.Invalidlogin.invalid_user_goes_to_website(Invalidlogin.java:26)
-	at ✽.Invalid User goes to "https://demo.broadleafcommerce.org/" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/InvalidLogin.feature:8)
-
     Then Invalid User hovers to sign_in_link                                # Invalidlogin.invalid_user_hovers_to_sign_in_link()
     Then Invalid User clicks sign_in_link                                   # Invalidlogin.invalid_user_clicks_sign_in_link()
     Then Invalid User enters "" as username                                 # Invalidlogin.invalid_User_enters_as_username(String)
@@ -92,12 +68,6 @@ Feature: Search function of www.heatclinic.com
   Scenario: Testing the search functionality for valid users              # I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/SearchTest.feature:5
     Given Valid User opens browser                                        # SearchWebsite.valid_User_opens_browser()
     When Valid User goes to "https://demo.broadleafcommerce.org/" website # SearchWebsite.valid_User_goes_to_website(String)
-      java.lang.NullPointerException
-	at com.heatclinic.pages.HomePage.delay(HomePage.java:69)
-	at com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)
-	at com.heatclinic.steps.SearchWebsite.valid_User_goes_to_website(SearchWebsite.java:30)
-	at ✽.Valid User goes to "https://demo.broadleafcommerce.org/" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/SearchTest.feature:8)
-
     Then Valid User hovers to sign_in_link                                # SearchWebsite.valid_User_hovers_to_sign_in_link()
     Then Valid User clicks sign_in_link                                   # SearchWebsite.valid_User_clicks_sign_in_link()
     Then Valid User enters usercredentials in login text fields           # SearchWebsite.valid_User_enters_usercredentials_in_login_text_fields(DataTable)
@@ -117,12 +87,6 @@ Description: Test to check whether a user can follow the process to login and lo
   Scenario: User enters valids username and password to enter authorized login homepage # I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/ValidLogin.feature:7
     Given User opens browser                                                            # Validlogin.user_opens_browser()
     When User goes to "https://demo.broadleafcommerce.org/" website                     # Validlogin.user_goes_to_website(String)
-      java.lang.NullPointerException
-	at com.heatclinic.pages.HomePage.delay(HomePage.java:69)
-	at com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)
-	at com.heatclinic.steps.Validlogin.user_goes_to_website(Validlogin.java:28)
-	at ✽.User goes to "https://demo.broadleafcommerce.org/" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/ValidLogin.feature:10)
-
     Then User hovers to sign_in_link                                                    # Validlogin.user_hovers_to_sign_in_link()
     Then User clicks sign_in_link                                                       # Validlogin.user_clicks_sign_in_link()
     Then User enters "moltenboy.robin@gmail.com" as username                            # Validlogin.user_enters_as_username(String)
@@ -138,12 +102,6 @@ Feature: Checkout page function of www.heatclinic.com
   Scenario: Testing the checkout page functionality for valid users                            # I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/ValidUserCheckout.feature:5
     Given Existing Valid User opens browser                                                    # ValidCheckout.existing_Valid_User_opens_browser()
     When Existing Valid User goes to "https://demo.broadleafcommerce.org/" website             # ValidCheckout.existing_Valid_User_goes_to_website(String)
-      java.lang.NullPointerException
-	at com.heatclinic.pages.HomePage.delay(HomePage.java:69)
-	at com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:40)
-	at com.heatclinic.steps.ValidCheckout.existing_Valid_User_goes_to_website(ValidCheckout.java:35)
-	at ✽.Existing Valid User goes to "https://demo.broadleafcommerce.org/" website(I:/eclipse-workspace/heatclinic.bdd/src/main/resources/TestResource/Features/ValidUserCheckout.feature:8)
-
     Then Existing Valid User hovers to sign_in_link                                            # ValidCheckout.existing_Valid_User_hovers_to_sign_in_link()
     Then Existing Valid User clicks sign_in_link                                               # ValidCheckout.existing_Valid_User_clicks_sign_in_link()
     Then Existing Valid User enters username and password in login text fields                 # ValidCheckout.existing_Valid_User_enters_username_and_password_in_login_text_fields(DataTable)
