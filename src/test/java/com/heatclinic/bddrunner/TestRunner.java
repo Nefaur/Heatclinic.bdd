@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="I:\\eclipse-workspace\\heatclinic.bdd\\src\\main\\resources\\TestResource\\Features",
+		features="src/main/resources/TestResource/Features",
 		glue= {"com.heatclinic.steps"},
 //		dryRun=true,
 		strict=true,

@@ -1,0 +1,80 @@
+Feature: Invalid login function of www.heatclinic.com
+
+  @FunctionalTest @SmokeTest
+  Scenario Outline: Testing the login functionality for invalid users # src/main/resources/TestResource/Features/InvalidLogin.feature:5
+    Given Invalid User opens browser
+    When Invalid User goes to "https://demo.broadleafcommerce.org/" website
+    Then Invalid User hovers to sign_in_link
+    Then Invalid User clicks sign_in_link
+    Then Invalid User enters <username> as username
+    Then Invalid User enters <password> as password
+    Then Invalid User clicks on submit button
+    Then Invalid User gets failed login message
+    Then Invalid User closes browser
+
+    Examples: 
+
+  @FunctionalTest @SmokeTest
+  Scenario Outline: Testing the login functionality for invalid users       # src/main/resources/TestResource/Features/InvalidLogin.feature:19
+    Given Invalid User opens browser                                        # Invalidlogin.invalid_user_opens_browser()
+    When Invalid User goes to "https://demo.broadleafcommerce.org/" website # Invalidlogin.invalid_user_goes_to_website(String)
+    Then Invalid User hovers to sign_in_link                                # Invalidlogin.invalid_user_hovers_to_sign_in_link()
+    Then Invalid User clicks sign_in_link                                   # Invalidlogin.invalid_user_clicks_sign_in_link()
+    Then Invalid User enters "moltenboy.robin@gmail.com" as username        # Invalidlogin.invalid_User_enters_as_username(String)
+      org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=70.0.3538.16 (16ed95b41bb05e565b11fb66ac33c660b721f778),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'NEFAUR', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 70.0.3538.16 (16ed95b41bb05..., userDataDir: C:\Users\Asus\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64737}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 69.0.3497.100, webStorageEnabled: true}
+Session ID: 8df01b6c5e1417faa1a4a01ace823941
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:286)
+	at com.heatclinic.pages.LoginPage.verify_LoginPage(LoginPage.java:59)
+	at com.heatclinic.steps.Invalidlogin.invalid_User_enters_as_username(Invalidlogin.java:41)
+	at ✽.Invalid User enters "moltenboy.robin@gmail.com" as username(src/main/resources/TestResource/Features/InvalidLogin.feature:11)
+
+    Then Invalid User enters "123456789" as password                        # Invalidlogin.invalid_User_enters_as_password(String)
+    Then Invalid User clicks on submit button                               # Invalidlogin.invalid_User_clicks_on_submit_button()
+    Then Invalid User gets failed login message                             # Invalidlogin.invalid_user_gets_failed_login_message()
+    Then Invalid User closes browser                                        # Invalidlogin.invalid_user_closes_browser()
+
+  @FunctionalTest @SmokeTest
+  Scenario Outline: Testing the login functionality for invalid users       # src/main/resources/TestResource/Features/InvalidLogin.feature:20
+    Given Invalid User opens browser                                        # Invalidlogin.invalid_user_opens_browser()
+    When Invalid User goes to "https://demo.broadleafcommerce.org/" website # Invalidlogin.invalid_user_goes_to_website(String)
+      org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'NEFAUR', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:276)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:853)
+	at com.heatclinic.pages.HomePage.goToHomepage(HomePage.java:41)
+	at com.heatclinic.steps.Invalidlogin.invalid_user_goes_to_website(Invalidlogin.java:26)
+	at ✽.Invalid User goes to "https://demo.broadleafcommerce.org/" website(src/main/resources/TestResource/Features/InvalidLogin.feature:8)
+
+    Then Invalid User hovers to sign_in_link                                # Invalidlogin.invalid_user_hovers_to_sign_in_link()
+    Then Invalid User clicks sign_in_link                                   # Invalidlogin.invalid_user_clicks_sign_in_link()
+    Then Invalid User enters "moltenboy@gmail.com" as username              # Invalidlogin.invalid_User_enters_as_username(String)
+    Then Invalid User enters "A1234567@" as password                        # Invalidlogin.invalid_User_enters_as_password(String)
+    Then Invalid User clicks on submit button                               # Invalidlogin.invalid_User_clicks_on_submit_button()
+    Then Invalid User gets failed login message                             # Invalidlogin.invalid_user_gets_failed_login_message()
+    Then Invalid User closes browser                                        # Invalidlogin.invalid_user_closes_browser()
