@@ -42,7 +42,7 @@ public class PropertyReader {
 
 		try {
 
-			input = new FileInputStream("I:\\eclipse-workspace\\heatclinic.bdd\\src\\main\\resources\\TestResource\\Config.properties");
+			input = new FileInputStream("src/main/resources/TestResource/Config.properties");
 			// load a properties file
 			properties.load(input);
 
