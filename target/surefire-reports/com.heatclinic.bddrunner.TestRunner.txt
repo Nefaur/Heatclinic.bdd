@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.heatclinic.bddrunner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 211.889 s - in com.heatclinic.bddrunner.TestRunner
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 260.934 s - in com.heatclinic.bddrunner.TestRunner
