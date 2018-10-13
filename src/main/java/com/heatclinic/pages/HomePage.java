@@ -1,7 +1,5 @@
 package com.heatclinic.pages;
 
-
-
 import java.util.concurrent.TimeUnit;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -13,26 +11,22 @@ import com.heatclinic.framework.DriverFactory;
 import com.heatclinic.framework.PropertyReader;
 import com.heatclinic.utilities.Mouseandkeyboardactions;
 
+public class HomePage {
 
-
-
-public class HomePage{
-	
 	private WebDriver driver;
-	
-	
-	@FindBy(how=How.XPATH,using="//a[contains(text(),'Login')]")
-	WebElement SIGN_IN_LINK;
 
-	private Mouseandkeyboardactions mousefunction=new Mouseandkeyboardactions();
-	private String expectedHomePageURL="https://demo.broadleafcommerce.org/";
-	
+	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Login')]")
+	WebElement sign_In_Link;
+
+	private Mouseandkeyboardactions mousefunction = new Mouseandkeyboardactions();
+	private String expectedHomePageURL = PropertyReader.TEST_HOME_URL;
+
 	public HomePage() {
 		loadHomePage();
 	}
-	
+
 	private void loadHomePage() {
-		this.driver=DriverFactory.initialize().getdriver();
+		this.driver = DriverFactory.initialize().getdriver();
 		PageFactory.initElements(driver, this);
 	}
 
@@ -40,22 +34,22 @@ public class HomePage{
 		delay(2000);
 		driver.navigate().to(website);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		String homePageURL=driver.getCurrentUrl();
-		Assert.assertEquals(homePageURL,expectedHomePageURL);
-		System.out.println("Homepage URL is: "+homePageURL);
-		String homePageTitle=driver.getTitle();
-		System.out.println("Homepage title is: "+homePageTitle);
+		String homePageURL = driver.getCurrentUrl();
+		Assert.assertEquals(homePageURL, expectedHomePageURL);
+		System.out.println("Homepage URL is: " + homePageURL);
+		String homePageTitle = driver.getTitle();
+		System.out.println("Homepage title is: " + homePageTitle);
 	}
-	
+
 	public void hoverOnSignIn() {
 		delay(4000);
-		mousefunction.mouseHover(driver, SIGN_IN_LINK);;
+		mousefunction.mouseHover(driver, sign_In_Link);
 	}
-	
+
 	public void clickSignIn() {
-		mousefunction.mouseClick(driver, SIGN_IN_LINK);
+		mousefunction.mouseClick(driver, sign_In_Link);
 	}
-	
+
 	private void sleeper(int time) {
 		try {
 			Thread.sleep(time);
@@ -63,32 +57,30 @@ public class HomePage{
 			e.printStackTrace();
 		}
 	}
-	
+
 	private void delay(int time) {
-		String tbrowser=PropertyReader.BROWSER_TO_RUN;
+		String tbrowser = PropertyReader.BROWSER_TO_RUN;
 		switch (tbrowser) {
-		
+
 		case "chrome":
-			sleeper(time-time);
+			sleeper(time - time);
 			break;
-		
+
 		case "ch-grid":
-			sleeper(time-time);
+			sleeper(time - time);
 			break;
-			
+
 		case "ch-cloud":
-			sleeper(time-time);
+			sleeper(time - time);
 			break;
-			
+
 		case "":
-			sleeper(time-time);
+			sleeper(time - time);
 			break;
-			
+
 		default:
 			sleeper(time);
 			break;
+		}
 	}
-	
-	
-}
 }

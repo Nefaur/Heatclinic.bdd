@@ -1,7 +1,5 @@
 package com.heatclinic.steps;
 
-
-
 import com.heatclinic.pages.HomePage;
 import com.heatclinic.pages.LoginPage;
 import com.heatclinic.pages.MemberPage;
@@ -12,13 +10,12 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 
-public class SearchWebsite{
-	
+public class SearchWebsite {
 
-	private HomePage home=PageManager.getInstance().getHome();
-	private LoginPage login=PageManager.getInstance().getLogin();
-	private MemberPage member=PageManager.getInstance().getMember();
-	private SearchFunction search=PageManager.getInstance().getSearch();
+	private HomePage home = PageManager.getInstance().getHome();
+	private LoginPage login = PageManager.getInstance().getLogin();
+	private MemberPage member = PageManager.getInstance().getMember();
+	private SearchFunction search = PageManager.getInstance().getSearch();
 
 	@Given("Valid User opens browser")
 	public void valid_User_opens_browser() {
@@ -41,9 +38,9 @@ public class SearchWebsite{
 	}
 
 	@Then("Valid User enters usercredentials in login text fields")
-	public void valid_User_enters_usercredentials_in_login_text_fields(DataTable validuser){
-	    login.verify_LoginPage();
-	    login.dataTable(validuser);
+	public void valid_User_enters_usercredentials_in_login_text_fields(DataTable validuser) {
+		login.verify_LoginPage();
+		login.dataTable(validuser);
 	}
 
 	@Then("Valid User clicks on submit button")

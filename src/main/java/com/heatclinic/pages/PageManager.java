@@ -11,7 +11,7 @@ public class PageManager {
 	private SearchFunction search;
 	private ProductPage product;
 	private CartPage cart;
-	private CheckoutPage checkout;
+	private CheckoutPage checkOut;
 
 	private PageManager() {
 	}
@@ -45,7 +45,7 @@ public class PageManager {
 		}
 		
 		public CheckoutPage getCheckoutPage() {
-			return (checkout==null)? checkout=new CheckoutPage():checkout;
+			return (checkOut==null)? checkOut=new CheckoutPage():checkOut;
 		}
 		
 		public void closePages() {
@@ -55,7 +55,6 @@ public class PageManager {
 			search=null;
 			product=null;
 			cart=null;
-			checkout=null;
+			checkOut=null;
 		}
-		
 }

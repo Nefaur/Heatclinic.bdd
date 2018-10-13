@@ -1,6 +1,5 @@
 package com.heatclinic.steps;
 
-
 import com.heatclinic.pages.HomePage;
 import com.heatclinic.pages.LoginPage;
 import com.heatclinic.pages.PageManager;
@@ -10,12 +9,9 @@ import cucumber.api.java.en.When;
 
 public class Invalidlogin{
 	
-
 	private HomePage home=PageManager.getInstance().getHome();
 	private LoginPage login=PageManager.getInstance().getLogin();
-	
-	
-	
+		
 	@Given("Invalid User opens browser")
 	public void invalid_user_opens_browser() {
 		System.out.println("Opening website.");

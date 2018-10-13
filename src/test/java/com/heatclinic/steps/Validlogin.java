@@ -1,6 +1,5 @@
 package com.heatclinic.steps;
 
-
 import com.heatclinic.pages.HomePage;
 import com.heatclinic.pages.LoginPage;
 import com.heatclinic.pages.MemberPage;
@@ -9,15 +8,12 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
+public class Validlogin {
 
-public class Validlogin{
-		
+	private HomePage home = PageManager.getInstance().getHome();
+	private LoginPage login = PageManager.getInstance().getLogin();
+	private MemberPage member = PageManager.getInstance().getMember();
 
-	private HomePage home=PageManager.getInstance().getHome();
-	private LoginPage login=PageManager.getInstance().getLogin();
-	private MemberPage member=PageManager.getInstance().getMember();
-	
-	
 	@Given("User opens browser")
 	public void user_opens_browser() {
 		System.out.println("Opening website.");
@@ -43,7 +39,7 @@ public class Validlogin{
 		login.verify_LoginPage();
 		login.enterUsername(username);
 	}
-	
+
 	@Then("User enters {string} as password")
 	public void user_enters_as_password(String password) {
 		login.enterPassword(password);
@@ -64,12 +60,11 @@ public class Validlogin{
 	public void user_logsout() {
 		member.logout();
 	}
-	
+
 	@Then("User closes browser")
 	public void user_closes_browser() {
 		PageManager.getInstance().closePages();
 		System.out.println("Closing browser.");
 	}
-	
-	
+
 }

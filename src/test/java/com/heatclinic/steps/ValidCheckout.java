@@ -1,6 +1,5 @@
 package com.heatclinic.steps;
 
-
 import com.heatclinic.pages.CartPage;
 import com.heatclinic.pages.CheckoutPage;
 import com.heatclinic.pages.HomePage;
@@ -17,17 +16,17 @@ import io.cucumber.datatable.DataTable;
 
 public class ValidCheckout extends TestBase {
 
-	private HomePage home=PageManager.getInstance().getHome();
-	private LoginPage login=PageManager.getInstance().getLogin();
-	private MemberPage member=PageManager.getInstance().getMember();
-	private SearchFunction search=PageManager.getInstance().getSearch();
-	private ProductPage product=PageManager.getInstance().getProductPage();
-	private CartPage cart=PageManager.getInstance().getCartPage();
-	private CheckoutPage checkout=PageManager.getInstance().getCheckoutPage();
-	
+	private HomePage home = PageManager.getInstance().getHome();
+	private LoginPage login = PageManager.getInstance().getLogin();
+	private MemberPage member = PageManager.getInstance().getMember();
+	private SearchFunction search = PageManager.getInstance().getSearch();
+	private ProductPage product = PageManager.getInstance().getProductPage();
+	private CartPage cart = PageManager.getInstance().getCartPage();
+	private CheckoutPage checkOut = PageManager.getInstance().getCheckoutPage();
+
 	@Given("Existing Valid User opens browser")
 	public void existing_Valid_User_opens_browser() {
-	     System.out.println("Opening website.");
+		System.out.println("Opening website.");
 	}
 
 	@When("Existing Valid User goes to {string} website")
@@ -47,8 +46,8 @@ public class ValidCheckout extends TestBase {
 
 	@Then("Existing Valid User enters username and password in login text fields")
 	public void existing_Valid_User_enters_username_and_password_in_login_text_fields(DataTable validuser) {
-		   login.verify_LoginPage();
-		   login.dataTable(validuser);
+		login.verify_LoginPage();
+		login.dataTable(validuser);
 	}
 
 	@Then("Existing Valid User clicks on submit button")
@@ -103,26 +102,26 @@ public class ValidCheckout extends TestBase {
 		cart.change_quantity("2");
 		cart.change_quantity("1");
 	}
-	
+
 	@Then("Logged in User clicks checkout button")
 	public void logged_in_User_clicks_checkout_button() {
 		cart.go_to_checkout();
-	}	
+	}
 
 	@Then("Logged in User fills in shipping information and clicks Continue")
 	public void logged_in_User_fills_in_shipping_information_and_clicks_Continue() {
-		checkout.verify_Checkoutpage();
-		checkout.enterShippingInfo();
+		checkOut.verify_Checkoutpage();
+		checkOut.enterShippingInfo();
 	}
 
 	@Then("Logged in User fills in payment information")
 	public void logged_in_User_fills_in_payment_information() {
-		checkout.paymentInfo();
+		checkOut.paymentInfo();
 	}
 
 	@Then("Logged in User gets purchase confirmation notification")
 	public void logged_in_User_gets_purchase_confirmation_notification() {
-		checkout.order_Confirmation();
+		checkOut.order_Confirmation();
 	}
 
 	@Then("Logged in User logouts")
@@ -135,5 +134,4 @@ public class ValidCheckout extends TestBase {
 		PageManager.getInstance().closePages();
 		System.out.println("Closing browser.");
 	}
-	
 }
