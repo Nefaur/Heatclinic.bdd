@@ -17,31 +17,31 @@ public class CartPage {
 	private WebDriver driver;
 
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[1]/span[2]")
-	WebElement order_Value;
+	private WebElement orderValue;
 
 	@FindBy(how = How.NAME, using = "quantity")
-	WebElement order_quantity;
+	private WebElement orderQuantity;
 
 	@FindBy(how = How.XPATH, using = "//div[@class='col-sm-5 cart-product-pricing']//div")
-	WebElement product_Price;
+	private WebElement productPrice;
 
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/span[2]")
-	WebElement summary_Subtotal;
+	private WebElement summarySubtotal;
 
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[2]/div[2]/span[2]")
-	WebElement summary_total_savings;
+	private WebElement summaryTotalSavings;
 
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[2]/div[3]/span[2]")
-	WebElement summary_Taxes;
+	private WebElement summaryTaxes;
 
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[2]/div[4]/span[2]")
-	WebElement summary_Shipping;
+	private WebElement summaryShipping;
 
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[2]/div[5]/span[2]")
-	WebElement summary_Total;
+	private WebElement summaryTotal;
 
 	@FindBy(how = How.XPATH, using = "//a[@class='btn btn-primary']")
-	WebElement checkout_Button;
+	private WebElement checkoutButton;
 
 	public CartPage() {
 		loadCartPage();
@@ -63,23 +63,23 @@ public class CartPage {
 	}
 
 	public void change_quantity(String quantity) {
-		Select quant = new Select(order_quantity);
+		Select quant = new Select(orderQuantity);
 		quant.selectByValue(quantity);
 		sleeper(2000);
 		System.out.println("Order quantity: " + quantity);
 		sleeper(1000);
-		System.out.println("Order value= " + order_Value.getText());
-		System.out.println("Subtotal= " + summary_Subtotal.getText());
-		System.out.println("Total savings= " + summary_total_savings.getText());
-		System.out.println("Taxes= " + summary_Taxes.getText());
-		System.out.println("Shipping= " + summary_Shipping.getText());
-		System.out.println("Final price: " + summary_Total.getText() + "\n");
+		System.out.println("Order value= " + orderValue.getText());
+		System.out.println("Subtotal= " + summarySubtotal.getText());
+		System.out.println("Total savings= " + summaryTotalSavings.getText());
+		System.out.println("Taxes= " + summaryTaxes.getText());
+		System.out.println("Shipping= " + summaryShipping.getText());
+		System.out.println("Final price: " + summaryTotal.getText() + "\n");
 		sleeper(2000);
-		assertEquals("Assertion failed", order_Value.getText(), summary_Total.getText());
+		assertEquals("Assertion failed", orderValue.getText(), summaryTotal.getText());
 	}
 
 	public void go_to_checkout() {
-		checkout_Button.click();
+		checkoutButton.click();
 	}
 
 	private void sleeper(int time) {

@@ -1,89 +1,88 @@
 package com.heatclinic.pages;
 
 import static org.junit.Assert.assertTrue;
-
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
 import com.heatclinic.framework.DriverFactory;
 import com.heatclinic.framework.PropertyReader;
 import com.heatclinic.utilities.ExcelReader;
 
-public class CheckoutPage extends ExcelReader {
+public class CheckoutPage {
 
 	private WebDriver driver;
 
 	@FindBy(how = How.XPATH, using = "//i[@class='material-icons text-success']")
-	WebElement shipping_Tickmark;
+	private WebElement shippingTickmark;
 
 	@FindBy(how = How.XPATH, using = "//i[@class='material-icons text-success js-checkoutStageCompleteIcon']")
-	WebElement billing_Tickmark;
+	private WebElement billingTickmark;
 
 	@FindBy(how = How.ID, using = "fullName")
-	WebElement fullName;
+	private WebElement fullName;
 
 	@FindBy(how = How.ID, using = "addressLine1")
-	WebElement address1;
+	private WebElement address1;
 
 	@FindBy(how = How.ID, using = "addressLine2")
-	WebElement address2;
+	private WebElement address2;
 
 	@FindBy(how = How.ID, using = "city")
-	WebElement city;
+	private WebElement city;
 
 	@FindBy(how = How.ID, using = "stateProvinceRegion")
-	WebElement state_Abbreviation;
+	private WebElement stateAbbreviation;
 
 	@FindBy(how = How.ID, using = "postalCode")
-	WebElement postCode;
+	private WebElement postCode;
 
 	@FindBy(how = How.ID, using = "phonePrimary")
-	WebElement phone;
+	private WebElement phone;
 
 	@FindBy(how = How.XPATH, using = "//div[@class='col-sm-6 shipping-methods-wrapper']//div[3]//label[1]//span[1]")
-	WebElement express_Shipping;
+	private WebElement expressShipping;
 
 	@FindBy(how = How.XPATH, using = "//div[@class='alert alert-danger payment-alert']//div[@class='container-fluid']")
-	WebElement payment_Alert;
+	private WebElement paymentAlert;
 
 	@FindBy(how = How.XPATH, using = "//div[@class='checkbox use-shipping-address-wrapper']//span[@class='check']")
-	WebElement billing_Address_Same;
+	private WebElement billingAddressSame;
 
 	@FindBy(how = How.XPATH, using = "//div[@class='billing-address-btn js-copiedShippingAddress']")
-	WebElement billing_Address_Preview;
+	private WebElement billingAddressPreview;
 
 	@FindBy(how = How.XPATH, using = "//div[@class='card define-new-credit-card js-defineNewCreditCard']//div[@class='card-content']")
-	WebElement new_Card_Payment;
+	private WebElement newCardPayment;
 
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Save this card for future purchases')]")
-	WebElement save_For_Future;
+	private WebElement saveForFuture;
 
 	@FindBy(how = How.ID, using = "cardNumber")
-	WebElement card_Number;
+	private WebElement cardNumber;
 
 	@FindBy(how = How.ID, using = "securityCode")
-	WebElement security_Code;
+	private WebElement securityCode;
 
 	@FindBy(how = How.ID, using = "cardExpDate")
-	WebElement card_Expiry_Date;
+	private WebElement cardExpiryDate;
 
 	@FindBy(how = How.XPATH, using = "//a[@class='btn btn-primary pull-right js-submitCheckoutStage']")
-	WebElement continue_Payment;
+	private WebElement continuePayment;
 
 	@FindBy(how = How.XPATH, using = "//a[@class='btn btn-primary pull-right js-submitPaymentCheckoutStage']")
-	WebElement continue_Checkout;
+	private WebElement continueCheckout;
 
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/div[2]/a[1]/span[1]")
-	WebElement place_Order;
+	private WebElement placeOrder;
 
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]")
-	WebElement order_Confirmation;
+	private WebElement orderConfirmation;
+
+	private ExcelReader excel = new ExcelReader();
 
 	public CheckoutPage() {
 		loadCheckoutPage();
@@ -107,60 +106,60 @@ public class CheckoutPage extends ExcelReader {
 	public void enterShippingInfo() {
 		sleeper(2000);
 		try {
-			fullName.sendKeys(readExcel(1));
-			address1.sendKeys(readExcel(2));
-			address2.sendKeys(readExcel(3));
-			city.sendKeys(readExcel(4));
-			Select state = new Select(state_Abbreviation);
-			state.selectByValue(readExcel(5));
-			postCode.sendKeys(readExcel(6));
-			phone.sendKeys(readExcel(7));
-			close_Excel();
+			fullName.sendKeys(excel.readExcel(1));
+			address1.sendKeys(excel.readExcel(2));
+			address2.sendKeys(excel.readExcel(3));
+			city.sendKeys(excel.readExcel(4));
+			Select state = new Select(stateAbbreviation);
+			state.selectByValue(excel.readExcel(5));
+			postCode.sendKeys(excel.readExcel(6));
+			phone.sendKeys(excel.readExcel(7));
+			excel.close_Excel();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		express_Shipping.click();
+		expressShipping.click();
 		sleeper(2000);
-		continue_Payment.click();
+		continuePayment.click();
 	}
 
 	public void paymentInfo() {
 		sleeper(2000);
-		assertTrue(shipping_Tickmark.isDisplayed());
-		assertTrue(payment_Alert.isDisplayed());
-		System.out.println(payment_Alert.getText());
-		if (new_Card_Payment.isDisplayed()) {
-			new_Card_Payment.click();
+		assertTrue(shippingTickmark.isDisplayed());
+		assertTrue(paymentAlert.isDisplayed());
+		System.out.println(paymentAlert.getText());
+		if (newCardPayment.isDisplayed()) {
+			newCardPayment.click();
 		}
 		sleeper(2000);
-		save_For_Future.click();
-		billing_Address_Same.click();
-		System.out.println("Billing info: \n" + billing_Address_Preview.getText());
+		saveForFuture.click();
+		billingAddressSame.click();
+		System.out.println("Billing info: \n" + billingAddressPreview.getText());
 		sleeper(2000);
 		try {
-			card_Number.clear();
+			cardNumber.clear();
 			sleeper(1000);
-			card_Number.sendKeys(readExcel(8));
-			security_Code.clear();
+			cardNumber.sendKeys(excel.readExcel(8));
+			securityCode.clear();
 			sleeper(1000);
-			security_Code.sendKeys(readExcel(9));
-			card_Expiry_Date.clear();
+			securityCode.sendKeys(excel.readExcel(9));
+			cardExpiryDate.clear();
 			sleeper(1000);
-			card_Expiry_Date.sendKeys(readExcel(10));
-			close_Excel();
+			cardExpiryDate.sendKeys(excel.readExcel(10));
+			excel.close_Excel();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		continue_Checkout.click();
+		continueCheckout.click();
 		sleeper(1000);
-		assertTrue(billing_Tickmark.isDisplayed());
+		assertTrue(billingTickmark.isDisplayed());
 	}
 
 	public void order_Confirmation() {
-		place_Order.click();
+		placeOrder.click();
 		sleeper(1000);
-		assertTrue(order_Confirmation.isDisplayed());
-		System.out.println(order_Confirmation.getText());
+		assertTrue(orderConfirmation.isDisplayed());
+		System.out.println(orderConfirmation.getText());
 	}
 
 	private void sleeper(int time) {

@@ -16,7 +16,7 @@ public class HomePage {
 	private WebDriver driver;
 
 	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Login')]")
-	WebElement sign_In_Link;
+	private WebElement signInLink;
 
 	private Mouseandkeyboardactions mousefunction = new Mouseandkeyboardactions();
 	private String expectedHomePageURL = PropertyReader.TEST_HOME_URL;
@@ -43,11 +43,11 @@ public class HomePage {
 
 	public void hoverOnSignIn() {
 		delay(4000);
-		mousefunction.mouseHover(driver, sign_In_Link);
+		mousefunction.mouseHover(driver, signInLink);
 	}
 
 	public void clickSignIn() {
-		mousefunction.mouseClick(driver, sign_In_Link);
+		mousefunction.mouseClick(driver, signInLink);
 	}
 
 	private void sleeper(int time) {

@@ -20,19 +20,19 @@ public class SearchFunction {
 	private WebDriver driver;
 
 	@FindBy(how = How.XPATH, using = "//input[@placeholder='search']")
-	WebElement searchBar;
+	private WebElement searchBar;
 
 	@FindBy(how = How.XPATH, using = "//li[@class='col-sm-3 ta-column']//ul/descendant::li")
-	List<WebElement> search_Results;
+	private List<WebElement> searchResults;
 
 	@FindBy(how = How.XPATH, using = "//h4[contains(text(),'Price')]")
-	WebElement price_Range;
+	private WebElement priceRange;
 
 	@FindBy(how = How.XPATH, using = "//a//div[@class='js-image image card-image']//img")
-	List<WebElement> sauce_Names;
+	private List<WebElement> sauceNames;
 
 	@FindBy(how = How.XPATH, using = "//span[@class='small-text pull-right page-results-counter']")
-	WebElement result_Counter;
+	private WebElement resultCounter;
 
 	private Mouseandkeyboardactions mousekeyboard = new Mouseandkeyboardactions();
 	private JavaScriptActions js = new JavaScriptActions();
@@ -61,7 +61,7 @@ public class SearchFunction {
 
 	public void selectQuery() {
 		delay(2000);
-		List<WebElement> list = search_Results;
+		List<WebElement> list = searchResults;
 		System.out.println("Total number of suggestions in search box: " + list.size());
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i).getText());
@@ -94,14 +94,14 @@ public class SearchFunction {
 
 		String price_xpath = "//div//div[@id='collapse1']//div[@class='panel-body']//div[" + price + "]//label[1]";
 		WebElement selected_Price_Rangerice_Range = driver.findElement(By.xpath(price_xpath));
-		price_Range.click();
+		priceRange.click();
 		sleeper(3000);
 		System.out.println("Price selected: " + selected_Price_Rangerice_Range.getText());
 		mousekeyboard.mouseClick(driver, selected_Price_Rangerice_Range);
 		sleeper(2000);
-		System.out.println("Number of results found: " + result_Counter.getText());
+		System.out.println("Number of results found: " + resultCounter.getText());
 		delay(4000);
-		List<WebElement> imagename = sauce_Names;
+		List<WebElement> imagename = sauceNames;
 		int number = imagename.size();
 		System.out.println("Total number of Sauce names found= " + number);
 		sleeper(2000);

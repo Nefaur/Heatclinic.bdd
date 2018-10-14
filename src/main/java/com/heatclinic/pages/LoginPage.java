@@ -20,20 +20,20 @@ public class LoginPage {
 	private WebDriver driver;
 
 	@FindBy(how = How.XPATH, using = "//input[@type='email']")
-	WebElement sign_In_Email_Input;
+	private WebElement signInEmailInput;
 
 	@FindBy(how = How.XPATH, using = "//input[@type='password']")
-	WebElement sign_In_Password_Input;
+	private WebElement signInPasswordInput;
 
 	@FindBy(how = How.XPATH, using = "//button[contains(text(),'Login')]")
-	WebElement sign_In_Submit_Button;
+	private WebElement signInSubmitButton;
 
 	@FindBy(how = How.XPATH, using = "//p[@class='text-danger']")
-	WebElement login_Fail_Alert;
+	private WebElement loginFailAlert;
 
 	private JavaScriptActions js = new JavaScriptActions();
-	private String loginPageURL = "https://demo.broadleafcommerce.org/login";
-	private String loginPageTitle = "Broadleaf Commerce Demo Store - Heat Clinic - Login";
+	private String loginPageURL = PropertyReader.TEST_LOGINPAGE_URL;
+	private String loginPageTitle = PropertyReader.TEST_LOGINPATE_TITLE;
 
 	public LoginPage() {
 		loadLoginPage();
@@ -58,36 +58,36 @@ public class LoginPage {
 
 	public void enterUsername(String username) {
 		delay(2000);
-		sign_In_Email_Input.sendKeys(username);
+		signInEmailInput.sendKeys(username);
 		System.out.println("Username is: " + username);
 	}
 
 	public void enterPassword(String password) {
 		delay(2000);
-		sign_In_Password_Input.sendKeys(password);
+		signInPasswordInput.sendKeys(password);
 		System.out.println("Password is: " + password);
 	}
 
 	public void dataMaps(DataTable usercredentials) {
 		List<Map<String, String>> data = usercredentials.asMaps(String.class, String.class);
-		sign_In_Email_Input.sendKeys(data.get(0).get("Username"));
-		sign_In_Password_Input.sendKeys(data.get(0).get("Password"));
+		signInEmailInput.sendKeys(data.get(0).get("Username"));
+		signInPasswordInput.sendKeys(data.get(0).get("Password"));
 	}
 
 	public void dataTable(DataTable validuser) {
 		List<String> list = validuser.asList(String.class);
-		sign_In_Email_Input.sendKeys(list.get(0));
-		sign_In_Password_Input.sendKeys(list.get(1));
+		signInEmailInput.sendKeys(list.get(0));
+		signInPasswordInput.sendKeys(list.get(1));
 	}
 
 	public void clickSubmit() {
 		delay(2000);
-		js.javaClickWebElement(sign_In_Submit_Button, driver);
+		js.javaClickWebElement(signInSubmitButton, driver);
 	}
 
 	public void failedLogin() {
-		assertTrue(login_Fail_Alert.isDisplayed());
-		String msg = login_Fail_Alert.getText();
+		assertTrue(loginFailAlert.isDisplayed());
+		String msg = loginFailAlert.getText();
 		System.out.println(msg);
 	}
 

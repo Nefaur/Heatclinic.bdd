@@ -8,13 +8,12 @@ import com.heatclinic.pages.MemberPage;
 import com.heatclinic.pages.PageManager;
 import com.heatclinic.pages.ProductPage;
 import com.heatclinic.pages.SearchFunction;
-import com.heatclinic.tests.TestBase;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 
-public class ValidCheckout extends TestBase {
+public class ValidCheckout {
 
 	private HomePage home = PageManager.getInstance().getHome();
 	private LoginPage login = PageManager.getInstance().getLogin();

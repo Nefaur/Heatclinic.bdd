@@ -16,17 +16,17 @@ public class MemberPage {
 	private WebDriver driver;
 
 	@FindBy(how = How.XPATH, using = "//li[@class='dropdown']//a[@class='dropdown-toggle']")
-	WebElement user_Menu;
+	private WebElement userMenu;
 
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/nav[1]/div[1]/div[1]/ul[2]/li[1]/a[1]")
-	WebElement user_Profile;
+	private WebElement userProfile;
 
 	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Logout')]")
-	WebElement log_Out;
+	private WebElement logOut;
 
 	private Mouseandkeyboardactions mousefunction = new Mouseandkeyboardactions();
 	private String expectedMemberPageURL = PropertyReader.TEST_MEMBER_URL;
-	LoginPage logPage = new LoginPage();
+	
 
 	public MemberPage() {
 		loadMemberPage();
@@ -50,14 +50,14 @@ public class MemberPage {
 
 	public void verify_Member() {
 		delay(3000);
-		String userlogged = user_Profile.getText();
+		String userlogged = userProfile.getText();
 		System.out.println("User name: " + userlogged.substring(14, 20));
 	}
 
 	public void logout() {
-		mousefunction.mouseClick(driver, user_Menu);
+		mousefunction.mouseClick(driver, userMenu);
 		sleeper(2000);
-		mousefunction.mouseClick(driver, log_Out);
+		mousefunction.mouseClick(driver, logOut);
 		System.out.println("User is logged out.");
 	}
 

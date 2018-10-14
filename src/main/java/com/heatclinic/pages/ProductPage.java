@@ -16,34 +16,34 @@ public class ProductPage {
 	private WebDriver driver;
 
 	@FindBy(how = How.XPATH, using = "//button[@class='btn btn-primary js-addToCart']")
-	WebElement add_To_Cart;
+	private WebElement addToCart;
 
 	@FindBy(how = How.XPATH, using = "//a[@class='btn btn-secondary']")
-	WebElement added_To_Cart;
+	private WebElement addedToCart;
 
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/h3[1]")
-	WebElement selected_Product;
+	private WebElement selectedProduct;
 
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/h3[1]/span[1]")
-	WebElement selected_Product_Price;
+	private WebElement selectedProductPrice;
 
 	@FindBy(how = How.XPATH, using = "//ul[@class='nav navbar-nav navbar-right']//i[@class='material-icons'][contains(text(),'shopping_cart')]")
-	WebElement cart_Icon;
+	private WebElement cartIcon;
 
 	@FindBy(how = How.XPATH, using = "//li[@class='dropdown js-miniCart open']//li[@class='mini-cart-subtotal']//div")
-	WebElement cart_Wrapper_Subtotal;
+	private WebElement cartWrapperSubtotal;
 
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/nav[1]/div[1]/div[1]/ul[2]/li[4]/ul[1]/li[1]/div[2]/div[1]/span[1]")
-	WebElement item_Name_In_Wrapper;
+	private WebElement itemNameInWrapper;
 
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/nav[1]/div[1]/div[1]/ul[2]/li[4]/a[1]/span[1]")
-	WebElement number_Items_Cart;
+	private WebElement numberOfItemsCart;
 
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/nav[1]/div[1]/div[1]/ul[2]/li[4]/ul[1]/li[1]/div[1]")
-	WebElement empty_Cart;
+	private WebElement emptyCart;
 
 	@FindBy(how = How.XPATH, using = "//li[@class='dropdown js-miniCart open']//a[@class='btn btn-primary goto-full-cart'][contains(text(),'View Your Cart')]")
-	WebElement view_Cart;
+	private WebElement viewCart;
 
 	private JavaScriptActions js = new JavaScriptActions();
 
@@ -67,15 +67,15 @@ public class ProductPage {
 	}
 
 	public void product_Details() {
-		System.out.println("Selected sauce: " + selected_Product.getText() + "\nPrice of product: "
-				+ selected_Product_Price.getText());
+		System.out.println("Selected sauce: " + selectedProduct.getText() + "\nPrice of product: "
+				+ selectedProductPrice.getText());
 	}
 
 	public void addToCart() {
 		delay(2000);
-		js.javaClickWebElement(add_To_Cart, driver);
+		js.javaClickWebElement(addToCart, driver);
 		sleeper(2000);
-		if (added_To_Cart.isDisplayed()) {
+		if (addedToCart.isDisplayed()) {
 			System.out.println("Item added to cart.");
 		} else {
 			System.out.println("Item not added to cart.");
@@ -83,10 +83,10 @@ public class ProductPage {
 	}
 
 	public void go_to_cartpage() {
-		System.out.println("Total number of items in cart: " + number_Items_Cart.getText());
+		System.out.println("Total number of items in cart: " + numberOfItemsCart.getText());
 		sleeper(2000);
-		System.out.println("Items in cart: " + item_Name_In_Wrapper.getText() + "\n" + cart_Wrapper_Subtotal.getText());
-		view_Cart.click();
+		System.out.println("Items in cart: " + itemNameInWrapper.getText() + "\n" + cartWrapperSubtotal.getText());
+		viewCart.click();
 	}
 
 	private void sleeper(int time) {
