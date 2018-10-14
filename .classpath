@@ -6,11 +6,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
@@ -40,5 +35,10 @@
 	<classpathentry kind="lib" path="I:/DevTools/poi-bin-3.17-20170915/poi-3.17/poi-ooxml-schemas-3.17.jar"/>
 	<classpathentry kind="lib" path="I:/DevTools/poi-bin-3.17-20170915/poi-3.17/poi-scratchpad-3.17.jar"/>
 	<classpathentry kind="lib" path="I:/DevTools/poi-bin-3.17-20170915/poi-3.17/xmlbeans-2.6.0.jar"/>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
