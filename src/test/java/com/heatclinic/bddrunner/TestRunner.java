@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/main/resources/TestResource/Features", 
+		features = "src/test/resources/TestResource/Features/Invalidlogin.feature",
 		glue = { "com.heatclinic.steps" },
 		// dryRun=true,
 		strict = true, monochrome = true,

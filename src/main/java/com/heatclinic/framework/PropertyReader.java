@@ -39,7 +39,7 @@ public class PropertyReader {
 	private void load() {
 		InputStream input = null;
 		try {
-			input = new FileInputStream("src/main/resources/TestResource/Config.properties");
+			input = new FileInputStream("src/test/resources/TestResource/Config.properties");
 			// load a properties file
 			properties.load(input);
 		} catch (IOException io) {
