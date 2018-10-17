@@ -63,4 +63,5 @@ public class PropertyReader {
 	public static String EXCEL_FILEPATH = PropertyReader.getInstance().getProperty("excelfilepath");
 	public static String TEST_LOGINPAGE_URL = PropertyReader.getInstance().getProperty("loginPageURL");
 	public static String TEST_LOGINPATE_TITLE = PropertyReader.getInstance().getProperty("loginPageTitle");
+	public static String TEST_SEARCH_TEXT = PropertyReader.getInstance().getProperty("search");
 }
