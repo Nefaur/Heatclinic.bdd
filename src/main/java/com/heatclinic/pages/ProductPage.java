@@ -1,14 +1,13 @@
 package com.heatclinic.pages;
 
 import java.util.concurrent.TimeUnit;
-//import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import com.heatclinic.framework.DriverFactory;
-import com.heatclinic.framework.PropertyReader;
+import com.heatclinic.utilities.Delayed;
 import com.heatclinic.utilities.JavaScriptActions;
 
 public class ProductPage {
@@ -46,6 +45,7 @@ public class ProductPage {
 	private WebElement viewCart;
 
 	private JavaScriptActions js = new JavaScriptActions();
+	private Delayed slowBrowser = new Delayed();
 
 	public ProductPage() {
 		loadProductPage();
@@ -57,7 +57,7 @@ public class ProductPage {
 	}
 
 	public void verify_Productpage() {
-		delay(8000);
+		slowBrowser.delay(8000);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		String productPageURL = driver.getCurrentUrl();
@@ -72,9 +72,9 @@ public class ProductPage {
 	}
 
 	public void addToCart() {
-		delay(2000);
+		slowBrowser.delay(2000);
 		js.javaClickWebElement(addToCart, driver);
-		sleeper(2000);
+		slowBrowser.sleeper(2000);
 		if (addedToCart.isDisplayed()) {
 			System.out.println("Item added to cart.");
 		} else {
@@ -84,42 +84,8 @@ public class ProductPage {
 
 	public void go_to_cartpage() {
 		System.out.println("Total number of items in cart: " + numberOfItemsCart.getText());
-		sleeper(2000);
+		slowBrowser.sleeper(2000);
 		System.out.println("Items in cart: " + itemNameInWrapper.getText() + "\n" + cartWrapperSubtotal.getText());
 		viewCart.click();
-	}
-
-	private void sleeper(int time) {
-		try {
-			Thread.sleep(time);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
-
-	private void delay(int time) {
-		String tbrowser = PropertyReader.BROWSER_TO_RUN;
-		switch (tbrowser) {
-
-		case "chrome":
-			sleeper(time - time);
-			break;
-
-		case "ch-grid":
-			sleeper(time - time);
-			break;
-
-		case "ch-cloud":
-			sleeper(time - time);
-			break;
-
-		case "":
-			sleeper(time - time);
-			break;
-
-		default:
-			sleeper(time);
-			break;
-		}
 	}
 }

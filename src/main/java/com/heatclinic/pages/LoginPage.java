@@ -12,6 +12,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import com.heatclinic.framework.DriverFactory;
 import com.heatclinic.framework.PropertyReader;
+import com.heatclinic.utilities.Delayed;
 import com.heatclinic.utilities.JavaScriptActions;
 import io.cucumber.datatable.DataTable;
 
@@ -32,6 +33,8 @@ public class LoginPage {
 	private WebElement loginFailAlert;
 
 	private JavaScriptActions js = new JavaScriptActions();
+	private Delayed slowBrowser = new Delayed();
+
 	private String loginPageURL = PropertyReader.TEST_LOGINPAGE_URL;
 	private String loginPageTitle = PropertyReader.TEST_LOGINPATE_TITLE;
 
@@ -45,7 +48,7 @@ public class LoginPage {
 	}
 
 	public void verify_LoginPage() {
-		delay(8000);
+		slowBrowser.delay(8000);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		String expectedLoginPageURL = driver.getCurrentUrl();
@@ -57,13 +60,13 @@ public class LoginPage {
 	}
 
 	public void enterUsername(String username) {
-		delay(2000);
+		slowBrowser.delay(2000);
 		signInEmailInput.sendKeys(username);
 		System.out.println("Username is: " + username);
 	}
 
 	public void enterPassword(String password) {
-		delay(2000);
+		slowBrowser.delay(2000);
 		signInPasswordInput.sendKeys(password);
 		System.out.println("Password is: " + password);
 	}
@@ -81,7 +84,7 @@ public class LoginPage {
 	}
 
 	public void clickSubmit() {
-		delay(2000);
+		slowBrowser.delay(2000);
 		js.javaClickWebElement(signInSubmitButton, driver);
 	}
 
@@ -89,39 +92,5 @@ public class LoginPage {
 		assertTrue(loginFailAlert.isDisplayed());
 		String msg = loginFailAlert.getText();
 		System.out.println(msg);
-	}
-
-	private void sleeper(int time) {
-		try {
-			Thread.sleep(time);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
-
-	private void delay(int time) {
-		String tbrowser = PropertyReader.BROWSER_TO_RUN;
-		switch (tbrowser) {
-
-		case "chrome":
-			sleeper(time - time);
-			break;
-
-		case "ch-grid":
-			sleeper(time - time);
-			break;
-
-		case "ch-cloud":
-			sleeper(time - time);
-			break;
-
-		case "":
-			sleeper(time - time);
-			break;
-
-		default:
-			sleeper(time);
-			break;
-		}
 	}
 }

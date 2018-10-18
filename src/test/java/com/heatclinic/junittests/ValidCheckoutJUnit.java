@@ -40,7 +40,7 @@ public class ValidCheckoutJUnit extends ScriptBaseJUnit {
 		search.enterSearch(searchtext);
 		search.selectQuery();
 		search.selectPrice(5);
-		search.selectResult(2);
+		search.selectResult(3);
 		product.product_Details();
 		product.addToCart();
 		product.go_to_cartpage();

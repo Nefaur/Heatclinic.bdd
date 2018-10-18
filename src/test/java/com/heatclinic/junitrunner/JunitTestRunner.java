@@ -10,9 +10,9 @@ import com.heatclinic.junittests.ValidLoginJUnit;
 @RunWith(Suite.class)
 
 @Suite.SuiteClasses({ 
-					ValidLoginJUnit.class,
-					InvalidLoginJUnit.class,
-					SearchTestJUnit.class,
+//					ValidLoginJUnit.class,
+//					InvalidLoginJUnit.class,
+//					SearchTestJUnit.class,
 					ValidCheckoutJUnit.class
 					})
 

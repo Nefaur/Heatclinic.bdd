@@ -9,6 +9,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import com.heatclinic.framework.DriverFactory;
 import com.heatclinic.framework.PropertyReader;
+import com.heatclinic.utilities.Delayed;
 import com.heatclinic.utilities.Mouseandkeyboardactions;
 
 public class MemberPage {
@@ -25,8 +26,9 @@ public class MemberPage {
 	private WebElement logOut;
 
 	private Mouseandkeyboardactions mousefunction = new Mouseandkeyboardactions();
+	private Delayed slowBrowser = new Delayed();
+
 	private String expectedMemberPageURL = PropertyReader.TEST_MEMBER_URL;
-	
 
 	public MemberPage() {
 		loadMemberPage();
@@ -38,7 +40,7 @@ public class MemberPage {
 	}
 
 	public void verify_MemberPage() {
-		delay(4000);
+		slowBrowser.delay(4000);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		String memberPageURL = driver.getCurrentUrl();
@@ -49,49 +51,49 @@ public class MemberPage {
 	}
 
 	public void verify_Member() {
-		delay(3000);
+		slowBrowser.delay(3000);
 		String userlogged = userProfile.getText();
 		System.out.println("User name: " + userlogged.substring(14, 20));
 	}
 
 	public void logout() {
 		mousefunction.mouseClick(driver, userMenu);
-		sleeper(2000);
+		slowBrowser.sleeper(2000);
 		mousefunction.mouseClick(driver, logOut);
 		System.out.println("User is logged out.");
 	}
 
-	private void sleeper(int time) {
-		try {
-			Thread.sleep(time);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
-
-	private void delay(int time) {
-		String tbrowser = PropertyReader.BROWSER_TO_RUN;
-		switch (tbrowser) {
-
-		case "chrome":
-			sleeper(time - time);
-			break;
-
-		case "ch-grid":
-			sleeper(time - time);
-			break;
-
-		case "ch-cloud":
-			sleeper(time - time);
-			break;
-
-		case "":
-			sleeper(time - time);
-			break;
-
-		default:
-			sleeper(time);
-			break;
-		}
-	}
+	// private void sleeper(int time) {
+	// try {
+	// Thread.sleep(time);
+	// } catch (InterruptedException e) {
+	// e.printStackTrace();
+	// }
+	// }
+	//
+	// private void delay(int time) {
+	// String tbrowser = PropertyReader.BROWSER_TO_RUN;
+	// switch (tbrowser) {
+	//
+	// case "chrome":
+	// sleeper(time - time);
+	// break;
+	//
+	// case "ch-grid":
+	// sleeper(time - time);
+	// break;
+	//
+	// case "ch-cloud":
+	// sleeper(time - time);
+	// break;
+	//
+	// case "":
+	// sleeper(time - time);
+	// break;
+	//
+	// default:
+	// sleeper(time);
+	// break;
+	// }
+	// }
 }

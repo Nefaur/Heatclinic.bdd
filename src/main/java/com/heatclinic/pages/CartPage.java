@@ -8,9 +8,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
 import com.heatclinic.framework.DriverFactory;
-import com.heatclinic.framework.PropertyReader;
+//import com.heatclinic.framework.PropertyReader;
+import com.heatclinic.utilities.Delayed;
 
 public class CartPage {
 
@@ -43,6 +43,8 @@ public class CartPage {
 	@FindBy(how = How.XPATH, using = "//a[@class='btn btn-primary']")
 	private WebElement checkoutButton;
 
+	private Delayed slowBrowser = new Delayed();
+
 	public CartPage() {
 		loadCartPage();
 	}
@@ -53,7 +55,7 @@ public class CartPage {
 	}
 
 	public void verify_Cartpage() {
-		delay(8000);
+		slowBrowser.delay(8000);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		String cartPageURL = driver.getCurrentUrl();
@@ -65,55 +67,20 @@ public class CartPage {
 	public void change_quantity(String quantity) {
 		Select quant = new Select(orderQuantity);
 		quant.selectByValue(quantity);
-		sleeper(2000);
+		slowBrowser.sleeper(2000);
 		System.out.println("Order quantity: " + quantity);
-		sleeper(1000);
+		slowBrowser.sleeper(1000);
 		System.out.println("Order value= " + orderValue.getText());
 		System.out.println("Subtotal= " + summarySubtotal.getText());
 		System.out.println("Total savings= " + summaryTotalSavings.getText());
 		System.out.println("Taxes= " + summaryTaxes.getText());
 		System.out.println("Shipping= " + summaryShipping.getText());
 		System.out.println("Final price: " + summaryTotal.getText() + "\n");
-		sleeper(2000);
+		slowBrowser.sleeper(2000);
 		assertEquals("Assertion failed", orderValue.getText(), summaryTotal.getText());
 	}
 
 	public void go_to_checkout() {
 		checkoutButton.click();
 	}
-
-	private void sleeper(int time) {
-		try {
-			Thread.sleep(time);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
-
-	private void delay(int time) {
-		String tbrowser = PropertyReader.BROWSER_TO_RUN;
-		switch (tbrowser) {
-
-		case "chrome":
-			sleeper(time - time);
-			break;
-
-		case "ch-grid":
-			sleeper(time - time);
-			break;
-
-		case "ch-cloud":
-			sleeper(time - time);
-			break;
-
-		case "":
-			sleeper(time - time);
-			break;
-
-		default:
-			sleeper(time);
-			break;
-		}
-	}
-
 }

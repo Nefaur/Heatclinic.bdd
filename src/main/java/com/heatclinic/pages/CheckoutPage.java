@@ -9,7 +9,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import com.heatclinic.framework.DriverFactory;
-import com.heatclinic.framework.PropertyReader;
+import com.heatclinic.utilities.Delayed;
 import com.heatclinic.utilities.ExcelReader;
 
 public class CheckoutPage {
@@ -83,6 +83,7 @@ public class CheckoutPage {
 	private WebElement orderConfirmation;
 
 	private ExcelReader excel = new ExcelReader();
+	private Delayed slowBrowser = new Delayed();
 
 	public CheckoutPage() {
 		loadCheckoutPage();
@@ -94,7 +95,7 @@ public class CheckoutPage {
 	}
 
 	public void verify_Checkoutpage() {
-		delay(8000);
+		slowBrowser.delay(8000);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		String checkoutPageURL = driver.getCurrentUrl();
@@ -104,7 +105,7 @@ public class CheckoutPage {
 	}
 
 	public void enterShippingInfo() {
-		sleeper(2000);
+		slowBrowser.sleeper(2000);
 		try {
 			fullName.sendKeys(excel.readExcel(1));
 			address1.sendKeys(excel.readExcel(2));
@@ -119,80 +120,46 @@ public class CheckoutPage {
 			e.printStackTrace();
 		}
 		expressShipping.click();
-		sleeper(2000);
+		slowBrowser.sleeper(2000);
 		continuePayment.click();
 	}
 
 	public void paymentInfo() {
-		sleeper(2000);
+		slowBrowser.sleeper(2000);
 		assertTrue(shippingTickmark.isDisplayed());
 		assertTrue(paymentAlert.isDisplayed());
 		System.out.println(paymentAlert.getText());
 		if (newCardPayment.isDisplayed()) {
 			newCardPayment.click();
 		}
-		sleeper(2000);
+		slowBrowser.sleeper(2000);
 		saveForFuture.click();
 		billingAddressSame.click();
 		System.out.println("Billing info: \n" + billingAddressPreview.getText());
-		sleeper(2000);
+		slowBrowser.sleeper(2000);
 		try {
 			cardNumber.clear();
-			sleeper(1000);
+			slowBrowser.sleeper(1000);
 			cardNumber.sendKeys(excel.readExcel(8));
 			securityCode.clear();
-			sleeper(1000);
+			slowBrowser.sleeper(1000);
 			securityCode.sendKeys(excel.readExcel(9));
 			cardExpiryDate.clear();
-			sleeper(1000);
+			slowBrowser.sleeper(1000);
 			cardExpiryDate.sendKeys(excel.readExcel(10));
 			excel.close_Excel();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		continueCheckout.click();
-		sleeper(1000);
+		slowBrowser.sleeper(1000);
 		assertTrue(billingTickmark.isDisplayed());
 	}
 
 	public void order_Confirmation() {
 		placeOrder.click();
-		sleeper(1000);
+		slowBrowser.sleeper(1000);
 		assertTrue(orderConfirmation.isDisplayed());
 		System.out.println(orderConfirmation.getText());
-	}
-
-	private void sleeper(int time) {
-		try {
-			Thread.sleep(time);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
-
-	private void delay(int time) {
-		String tbrowser = PropertyReader.BROWSER_TO_RUN;
-		switch (tbrowser) {
-
-		case "chrome":
-			sleeper(time - time);
-			break;
-
-		case "ch-grid":
-			sleeper(time - time);
-			break;
-
-		case "ch-cloud":
-			sleeper(time - time);
-			break;
-
-		case "":
-			sleeper(time - time);
-			break;
-
-		default:
-			sleeper(time);
-			break;
-		}
 	}
 }

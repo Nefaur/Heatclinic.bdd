@@ -9,6 +9,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import com.heatclinic.framework.DriverFactory;
 import com.heatclinic.framework.PropertyReader;
+import com.heatclinic.utilities.Delayed;
 import com.heatclinic.utilities.Mouseandkeyboardactions;
 
 public class HomePage {
@@ -19,6 +20,8 @@ public class HomePage {
 	private WebElement signInLink;
 
 	private Mouseandkeyboardactions mousefunction = new Mouseandkeyboardactions();
+	private Delayed slowBrowser = new Delayed();
+
 	private String expectedHomePageURL = PropertyReader.TEST_HOME_URL;
 
 	public HomePage() {
@@ -31,7 +34,7 @@ public class HomePage {
 	}
 
 	public void goToHomepage(String website) {
-		delay(2000);
+		slowBrowser.delay(2000);
 		driver.navigate().to(website);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		String homePageURL = driver.getCurrentUrl();
@@ -42,45 +45,11 @@ public class HomePage {
 	}
 
 	public void hoverOnSignIn() {
-		delay(4000);
+		slowBrowser.delay(4000);
 		mousefunction.mouseHover(driver, signInLink);
 	}
 
 	public void clickSignIn() {
 		mousefunction.mouseClick(driver, signInLink);
-	}
-
-	private void sleeper(int time) {
-		try {
-			Thread.sleep(time);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
-
-	private void delay(int time) {
-		String tbrowser = PropertyReader.BROWSER_TO_RUN;
-		switch (tbrowser) {
-
-		case "chrome":
-			sleeper(time - time);
-			break;
-
-		case "ch-grid":
-			sleeper(time - time);
-			break;
-
-		case "ch-cloud":
-			sleeper(time - time);
-			break;
-
-		case "":
-			sleeper(time - time);
-			break;
-
-		default:
-			sleeper(time);
-			break;
-		}
 	}
 }
