@@ -9,8 +9,10 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import com.heatclinic.framework.DriverFactory;
+import com.heatclinic.utilities.CheckWebLinks;
 //import com.heatclinic.framework.PropertyReader;
 import com.heatclinic.utilities.Delayed;
+import com.heatclinic.utilities.ScreenCapture;
 
 public class CartPage {
 
@@ -44,6 +46,8 @@ public class CartPage {
 	private WebElement checkoutButton;
 
 	private Delayed slowBrowser = new Delayed();
+	private CheckWebLinks checkWebLinks = new CheckWebLinks();
+	private ScreenCapture capture = new ScreenCapture();
 
 	public CartPage() {
 		loadCartPage();
@@ -64,6 +68,10 @@ public class CartPage {
 		System.out.println("Cart page title is: " + cartPageTitle);
 	}
 
+	public void checkLinks(String tagname, String attribute) {
+		checkWebLinks.checkingLinkConnection(driver, tagname, attribute);
+	}
+
 	public void change_quantity(String quantity) {
 		Select quant = new Select(orderQuantity);
 		quant.selectByValue(quantity);
@@ -81,6 +89,7 @@ public class CartPage {
 	}
 
 	public void go_to_checkout() {
+		capture.webElementScreenShot(driver, checkoutButton);
 		checkoutButton.click();
 	}
 }

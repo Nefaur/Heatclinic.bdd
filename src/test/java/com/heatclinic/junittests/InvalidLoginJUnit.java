@@ -1,6 +1,8 @@
 package com.heatclinic.junittests;
 
 import java.util.Collection;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -24,11 +26,24 @@ public class InvalidLoginJUnit extends ScriptBaseJUnit {
 		this.username = username;
 		this.password = password;
 	}
+	
+	@Before
+	public void initializeTest() {
+		setUp();
+	}
+	
+	@After
+	public void endTest() {
+		tearDown();
+	}
 
 	@Parameters
 	public static Collection<Object[]> userdata() {
-		return Arrays.asList(new Object[][] { { "moltenboy.robin@gmail.com", "123456789" },
-				{ "moltenboy@gmail.com", "A1234567@" }, { "moltenboy@gmail.com", "" }, { "", "A1234567@" } });
+		return Arrays.asList(new Object[][] { 
+				{ "moltenboy.robin@gmail.com", "123456789" },
+				{ "moltenboy@gmail.com", "A1234567@" }, 
+				{ "moltenboy@gmail.com", "" }, 
+				{ "", "A1234567@" } });
 	}
 
 	@Test

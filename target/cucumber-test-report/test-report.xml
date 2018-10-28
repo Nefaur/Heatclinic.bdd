@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="115.933784">
-<testcase classname="Checkout page function of www.heatclinic.com" name="Testing the checkout page functionality for valid users" time="115.933784">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="65.785039">
+<testcase classname="Checkout page function of www.heatclinic.com" name="Testing the checkout page functionality for valid users" time="65.785039">
 <system-out><![CDATA[Given Existing Valid User opens browser.....................................passed
 When Existing Valid User goes to "https://demo.broadleafcommerce.org/" website.passed
 Then Existing Valid User hovers to sign_in_link.............................passed

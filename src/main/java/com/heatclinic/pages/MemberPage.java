@@ -9,8 +9,10 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import com.heatclinic.framework.DriverFactory;
 import com.heatclinic.framework.PropertyReader;
+import com.heatclinic.utilities.CheckWebLinks;
 import com.heatclinic.utilities.Delayed;
 import com.heatclinic.utilities.Mouseandkeyboardactions;
+import com.heatclinic.utilities.ScreenCapture;
 
 public class MemberPage {
 
@@ -27,6 +29,8 @@ public class MemberPage {
 
 	private Mouseandkeyboardactions mousefunction = new Mouseandkeyboardactions();
 	private Delayed slowBrowser = new Delayed();
+	private CheckWebLinks checkWebLinks = new CheckWebLinks();
+	private ScreenCapture capture = new ScreenCapture();
 
 	private String expectedMemberPageURL = PropertyReader.TEST_MEMBER_URL;
 
@@ -50,8 +54,13 @@ public class MemberPage {
 		System.out.println("Memberpage title is: " + memberPageTitle);
 	}
 
+	public void checkLinks(String tagname, String attribute) {
+		checkWebLinks.checkingLinkConnection(driver, tagname, attribute);
+	}
+
 	public void verify_Member() {
 		slowBrowser.delay(3000);
+		capture.webElementScreenShot(driver, userMenu);
 		String userlogged = userProfile.getText();
 		System.out.println("User name: " + userlogged.substring(14, 20));
 	}
@@ -59,41 +68,8 @@ public class MemberPage {
 	public void logout() {
 		mousefunction.mouseClick(driver, userMenu);
 		slowBrowser.sleeper(2000);
+		capture.webElementScreenShot(driver, logOut);
 		mousefunction.mouseClick(driver, logOut);
 		System.out.println("User is logged out.");
 	}
-
-	// private void sleeper(int time) {
-	// try {
-	// Thread.sleep(time);
-	// } catch (InterruptedException e) {
-	// e.printStackTrace();
-	// }
-	// }
-	//
-	// private void delay(int time) {
-	// String tbrowser = PropertyReader.BROWSER_TO_RUN;
-	// switch (tbrowser) {
-	//
-	// case "chrome":
-	// sleeper(time - time);
-	// break;
-	//
-	// case "ch-grid":
-	// sleeper(time - time);
-	// break;
-	//
-	// case "ch-cloud":
-	// sleeper(time - time);
-	// break;
-	//
-	// case "":
-	// sleeper(time - time);
-	// break;
-	//
-	// default:
-	// sleeper(time);
-	// break;
-	// }
-	// }
 }

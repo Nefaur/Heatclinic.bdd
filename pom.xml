@@ -118,6 +118,14 @@
 			<artifactId>cucumber-jvm-parallel-plugin</artifactId>
 			<version>5.0.0</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.automation-remarks/video-recorder -->
+		<dependency>
+			<groupId>com.automation-remarks</groupId>
+			<artifactId>video-recorder</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

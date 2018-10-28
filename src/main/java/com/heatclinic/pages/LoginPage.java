@@ -12,18 +12,21 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import com.heatclinic.framework.DriverFactory;
 import com.heatclinic.framework.PropertyReader;
+import com.heatclinic.utilities.CheckWebLinks;
 import com.heatclinic.utilities.Delayed;
 import com.heatclinic.utilities.JavaScriptActions;
+import com.heatclinic.utilities.ScreenCapture;
+
 import io.cucumber.datatable.DataTable;
 
 public class LoginPage {
 
 	private WebDriver driver;
 
-	@FindBy(how = How.XPATH, using = "//input[@type='email']")
+	@FindBy(how = How.XPATH, using = "//input[@id='username']")
 	private WebElement signInEmailInput;
 
-	@FindBy(how = How.XPATH, using = "//input[@type='password']")
+	@FindBy(how = How.XPATH, using = "//div[@class='label-floating form-group is-empty']//input[@id='password']")
 	private WebElement signInPasswordInput;
 
 	@FindBy(how = How.XPATH, using = "//button[contains(text(),'Login')]")
@@ -34,6 +37,8 @@ public class LoginPage {
 
 	private JavaScriptActions js = new JavaScriptActions();
 	private Delayed slowBrowser = new Delayed();
+	private CheckWebLinks checkWebLinks = new CheckWebLinks();
+	private ScreenCapture capture = new ScreenCapture();
 
 	private String loginPageURL = PropertyReader.TEST_LOGINPAGE_URL;
 	private String loginPageTitle = PropertyReader.TEST_LOGINPATE_TITLE;
@@ -59,14 +64,20 @@ public class LoginPage {
 		System.out.println("Loginpage title is: " + expectedLoginPageTitle);
 	}
 
+	public void checkLinks(String tagname, String attribute) {
+		checkWebLinks.checkingLinkConnection(driver, tagname, attribute);
+	}
+
 	public void enterUsername(String username) {
 		slowBrowser.delay(2000);
+		capture.webElementScreenShot(driver, signInEmailInput);
 		signInEmailInput.sendKeys(username);
 		System.out.println("Username is: " + username);
 	}
 
 	public void enterPassword(String password) {
 		slowBrowser.delay(2000);
+		capture.webElementScreenShot(driver, signInPasswordInput);
 		signInPasswordInput.sendKeys(password);
 		System.out.println("Password is: " + password);
 	}
@@ -85,6 +96,7 @@ public class LoginPage {
 
 	public void clickSubmit() {
 		slowBrowser.delay(2000);
+		capture.webElementScreenShot(driver, signInSubmitButton);
 		js.javaClickWebElement(signInSubmitButton, driver);
 	}
 

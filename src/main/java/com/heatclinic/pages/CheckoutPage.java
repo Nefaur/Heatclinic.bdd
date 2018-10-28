@@ -9,8 +9,10 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import com.heatclinic.framework.DriverFactory;
+import com.heatclinic.utilities.CheckWebLinks;
 import com.heatclinic.utilities.Delayed;
 import com.heatclinic.utilities.ExcelReader;
+import com.heatclinic.utilities.ScreenCapture;
 
 public class CheckoutPage {
 
@@ -84,6 +86,8 @@ public class CheckoutPage {
 
 	private ExcelReader excel = new ExcelReader();
 	private Delayed slowBrowser = new Delayed();
+	private CheckWebLinks checkWebLinks = new CheckWebLinks();
+	private ScreenCapture capture = new ScreenCapture();
 
 	public CheckoutPage() {
 		loadCheckoutPage();
@@ -104,16 +108,26 @@ public class CheckoutPage {
 		System.out.println("Checkout title is: " + checkoutPageTitle);
 	}
 
+	public void checkLinks(String tagname, String attribute) {
+		checkWebLinks.checkingLinkConnection(driver, tagname, attribute);
+	}
+
 	public void enterShippingInfo() {
 		slowBrowser.sleeper(2000);
 		try {
+			capture.webElementScreenShot(driver, fullName);
 			fullName.sendKeys(excel.readExcel(1));
+			capture.webElementScreenShot(driver, address1);
 			address1.sendKeys(excel.readExcel(2));
+			capture.webElementScreenShot(driver, address2);
 			address2.sendKeys(excel.readExcel(3));
+			capture.webElementScreenShot(driver, city);
 			city.sendKeys(excel.readExcel(4));
 			Select state = new Select(stateAbbreviation);
 			state.selectByValue(excel.readExcel(5));
+			capture.webElementScreenShot(driver, postCode);
 			postCode.sendKeys(excel.readExcel(6));
+			capture.webElementScreenShot(driver, phone);
 			phone.sendKeys(excel.readExcel(7));
 			excel.close_Excel();
 		} catch (Exception e) {
@@ -134,6 +148,7 @@ public class CheckoutPage {
 		}
 		slowBrowser.sleeper(2000);
 		saveForFuture.click();
+		slowBrowser.sleeper(2000);
 		billingAddressSame.click();
 		System.out.println("Billing info: \n" + billingAddressPreview.getText());
 		slowBrowser.sleeper(2000);

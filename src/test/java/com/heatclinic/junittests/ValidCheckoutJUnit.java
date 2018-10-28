@@ -1,5 +1,7 @@
 package com.heatclinic.junittests;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import com.heatclinic.framework.PropertyReader;
 import com.heatclinic.pages.CartPage;
@@ -26,6 +28,16 @@ public class ValidCheckoutJUnit extends ScriptBaseJUnit {
 	private String homepage = PropertyReader.TEST_HOME_URL;
 	private String searchtext = PropertyReader.TEST_SEARCH_TEXT;
 
+	@Before
+	public void initializeTest() {
+		setUp();
+	}
+	
+	@After
+	public void endTest() {
+		tearDown();
+	}
+	
 	@Test
 	public void validCheckout() {
 		home.goToHomepage(homepage);

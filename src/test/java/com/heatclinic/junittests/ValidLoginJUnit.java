@@ -1,5 +1,7 @@
 package com.heatclinic.junittests;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import com.heatclinic.framework.PropertyReader;
 import com.heatclinic.pages.HomePage;
@@ -7,7 +9,7 @@ import com.heatclinic.pages.LoginPage;
 import com.heatclinic.pages.MemberPage;
 import com.heatclinic.pages.PageManager;
 
-public class ValidLoginJUnit extends ScriptBaseJUnit{
+public class ValidLoginJUnit extends ScriptBaseJUnit {
 
 	private String username = PropertyReader.USERNAME;
 	private String password = PropertyReader.PASSWORD;
@@ -16,6 +18,16 @@ public class ValidLoginJUnit extends ScriptBaseJUnit{
 	private HomePage home = PageManager.getInstance().getHome();
 	private LoginPage login = PageManager.getInstance().getLogin();
 	private MemberPage member = PageManager.getInstance().getMember();
+
+	@Before
+	public void initializeTest() {
+		setUp();
+	}
+
+	@After
+	public void endTest() {
+		tearDown();
+	}
 
 	@Test
 	public void validLogin() {

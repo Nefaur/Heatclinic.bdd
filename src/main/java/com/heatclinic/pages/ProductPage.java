@@ -7,8 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import com.heatclinic.framework.DriverFactory;
+import com.heatclinic.utilities.CheckWebLinks;
 import com.heatclinic.utilities.Delayed;
 import com.heatclinic.utilities.JavaScriptActions;
+import com.heatclinic.utilities.ScreenCapture;
 
 public class ProductPage {
 
@@ -46,6 +48,8 @@ public class ProductPage {
 
 	private JavaScriptActions js = new JavaScriptActions();
 	private Delayed slowBrowser = new Delayed();
+	private CheckWebLinks checkWebLinks = new CheckWebLinks();
+	private ScreenCapture capture=new ScreenCapture();
 
 	public ProductPage() {
 		loadProductPage();
@@ -65,6 +69,10 @@ public class ProductPage {
 		String productPageTitle = driver.getTitle();
 		System.out.println("Product title is: " + productPageTitle);
 	}
+	
+	public void checkLinks(String tagname, String attribute) {
+		checkWebLinks.checkingLinkConnection(driver, tagname, attribute);
+	}
 
 	public void product_Details() {
 		System.out.println("Selected sauce: " + selectedProduct.getText() + "\nPrice of product: "
@@ -73,6 +81,7 @@ public class ProductPage {
 
 	public void addToCart() {
 		slowBrowser.delay(2000);
+		capture.webElementScreenShot(driver, addToCart);	
 		js.javaClickWebElement(addToCart, driver);
 		slowBrowser.sleeper(2000);
 		if (addedToCart.isDisplayed()) {
@@ -86,6 +95,7 @@ public class ProductPage {
 		System.out.println("Total number of items in cart: " + numberOfItemsCart.getText());
 		slowBrowser.sleeper(2000);
 		System.out.println("Items in cart: " + itemNameInWrapper.getText() + "\n" + cartWrapperSubtotal.getText());
+		capture.webElementScreenShot(driver, viewCart);	
 		viewCart.click();
 	}
 }

@@ -9,8 +9,10 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import com.heatclinic.framework.DriverFactory;
 import com.heatclinic.framework.PropertyReader;
+import com.heatclinic.utilities.CheckWebLinks;
 import com.heatclinic.utilities.Delayed;
 import com.heatclinic.utilities.Mouseandkeyboardactions;
+import com.heatclinic.utilities.ScreenCapture;
 
 public class HomePage {
 
@@ -21,6 +23,8 @@ public class HomePage {
 
 	private Mouseandkeyboardactions mousefunction = new Mouseandkeyboardactions();
 	private Delayed slowBrowser = new Delayed();
+	private CheckWebLinks checkWebLinks = new CheckWebLinks();
+	private ScreenCapture capture = new ScreenCapture();
 
 	private String expectedHomePageURL = PropertyReader.TEST_HOME_URL;
 
@@ -42,6 +46,11 @@ public class HomePage {
 		System.out.println("Homepage URL is: " + homePageURL);
 		String homePageTitle = driver.getTitle();
 		System.out.println("Homepage title is: " + homePageTitle);
+		screenShotsOfWebElement();
+	}
+
+	public void checkLinks(String tagname, String attribute) {
+		checkWebLinks.checkingLinkConnection(driver, tagname, attribute);
 	}
 
 	public void hoverOnSignIn() {
@@ -51,5 +60,9 @@ public class HomePage {
 
 	public void clickSignIn() {
 		mousefunction.mouseClick(driver, signInLink);
+	}
+
+	private void screenShotsOfWebElement() {
+		capture.webElementScreenShot(driver, signInLink);
 	}
 }

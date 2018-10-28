@@ -40,5 +40,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="I:/DevTools/ATUTestRecorder_2.1/ATUTestRecorder_2.1.jar"/>
+	<classpathentry kind="lib" path="I:/DevTools/sikulixapi.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
