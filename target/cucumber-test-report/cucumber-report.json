@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 6457155393,
+              "duration": 39068303300,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 5,
-        "name": "Testing the checkout page functionality for valid users",
-        "description": "",
-        "id": "checkout-page-function-of-www.heatclinic.com;testing-the-checkout-page-functionality-for-valid-users",
+        "line": 7,
+        "name": "",
+        "description": "User enters valids username and password to enter authorized login homepage ",
+        "id": "login-function-test-of-www.heatclinic.com;",
         "after": [
           {
             "result": {
-              "duration": 833811413,
+              "duration": 1567280400,
               "status": "passed"
             },
             "match": {
@@ -34,298 +34,161 @@
         "steps": [
           {
             "result": {
-              "duration": 67088475,
+              "duration": 121076300,
               "status": "passed"
             },
-            "line": 7,
-            "name": "Existing Valid User opens browser",
+            "line": 10,
+            "name": "User opens browser",
             "match": {
-              "location": "ValidCheckout.existing_Valid_User_opens_browser()"
+              "location": "Validlogin.user_opens_browser()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1369485392,
+              "duration": 16443601700,
               "status": "passed"
             },
-            "line": 8,
-            "name": "Existing Valid User goes to \"https://demo.broadleafcommerce.org/\" website",
+            "line": 11,
+            "name": "User goes to \"https://demo.broadleafcommerce.org/\" website",
             "match": {
               "arguments": [
                 {
                   "val": "\"https://demo.broadleafcommerce.org/\"",
-                  "offset": 28
+                  "offset": 13
                 }
               ],
-              "location": "ValidCheckout.existing_Valid_User_goes_to_website(String)"
+              "location": "Validlogin.user_goes_to_website(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 143418605,
+              "duration": 4483029000,
               "status": "passed"
             },
-            "line": 9,
-            "name": "Existing Valid User hovers to sign_in_link",
+            "line": 12,
+            "name": "User hovers to sign_in_link",
             "match": {
-              "location": "ValidCheckout.existing_Valid_User_hovers_to_sign_in_link()"
+              "location": "Validlogin.user_hovers_to_sign_in_link()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 416864928,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "Existing Valid User clicks sign_in_link",
-            "match": {
-              "location": "ValidCheckout.existing_Valid_User_clicks_sign_in_link()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 4385154221,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "Existing Valid User enters username and password in login text fields",
-            "match": {
-              "location": "ValidCheckout.existing_Valid_User_enters_username_and_password_in_login_text_fields(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "moltenboy.robin@gmail.com",
-                  "A1234567@"
-                ]
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 727082667,
+              "duration": 2368800400,
               "status": "passed"
             },
             "line": 13,
-            "name": "Existing Valid User clicks on submit button",
+            "name": "User clicks sign_in_link",
             "match": {
-              "location": "ValidCheckout.existing_Valid_User_clicks_on_submit_button()"
+              "location": "Validlogin.user_clicks_sign_in_link()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 109579099,
+              "duration": 13436853900,
               "status": "passed"
             },
             "line": 14,
-            "name": "Existing Valid User is taken to member page",
+            "name": "User enters \"moltenboy.robin@gmail.com\" as username",
             "match": {
-              "location": "ValidCheckout.existing_Valid_User_is_taken_to_member_page()"
+              "arguments": [
+                {
+                  "val": "\"moltenboy.robin@gmail.com\"",
+                  "offset": 12
+                }
+              ],
+              "location": "Validlogin.user_enters_as_username(String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 76359204,
+              "duration": 4845253200,
               "status": "passed"
             },
             "line": 15,
-            "name": "Existing Valid User enters text in search field",
+            "name": "User enters \"A1234567@\" as password",
             "match": {
-              "location": "ValidCheckout.existing_Valid_User_enters_text_in_search_field(DataTable)"
+              "arguments": [
+                {
+                  "val": "\"A1234567@\"",
+                  "offset": 12
+                }
+              ],
+              "location": "Validlogin.user_enters_as_password(String)"
             },
-            "rows": [
-              {
-                "cells": [
-                  "Search"
-                ]
-              },
-              {
-                "cells": [
-                  "Hot"
-                ]
-              }
-            ],
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1223825471,
+              "duration": 5510686100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User clicks on submit button",
+            "match": {
+              "location": "Validlogin.user_clicks_on_submit_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10488249000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "User is taken to member page",
+            "match": {
+              "location": "Validlogin.user_is_taken_to_member_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6043332100,
               "status": "passed"
             },
             "line": 18,
-            "name": "Logged in User chooses the selection from search box field",
+            "name": "User logsout",
             "match": {
-              "location": "ValidCheckout.logged_in_User_chooses_the_selection_from_search_box_field()"
+              "location": "Validlogin.user_logsout()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 7351432521,
+              "duration": 95600,
               "status": "passed"
             },
             "line": 19,
-            "name": "Logged in User filters the selection by choosing price range",
+            "name": "User closes browser",
             "match": {
-              "location": "ValidCheckout.logged_in_User_filters_the_selection_by_choosing_price_range()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5136460177,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "Logged in User clicks on a selection from search result",
-            "match": {
-              "location": "ValidCheckout.logged_in_User_clicks_on_a_selection_from_search_result()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2067373924,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "Logged in User clicks add to cart",
-            "match": {
-              "location": "ValidCheckout.logged_in_User_clicks_add_to_cart()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2638339961,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "Logged in User goes to view cart page",
-            "match": {
-              "location": "ValidCheckout.logged_in_User_goes_to_view_cart_page()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 33187424,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "Logged in User goes to checkout page",
-            "match": {
-              "location": "ValidCheckout.logged_in_User_goes_to_checkout_page()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 10760360332,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "Logged in User increases the number of selected items to two and then decreases to one",
-            "match": {
-              "location": "ValidCheckout.logged_in_user_increases_the_number_of_selected_items_to_two_and_then_decreases_to_one()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 464514056,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "Logged in User clicks checkout button",
-            "match": {
-              "location": "ValidCheckout.logged_in_User_clicks_checkout_button()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 6019244892,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "Logged in User fills in shipping information and clicks Continue",
-            "match": {
-              "location": "ValidCheckout.logged_in_User_fills_in_shipping_information_and_clicks_Continue()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 11143343844,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "Logged in User fills in payment information",
-            "match": {
-              "location": "ValidCheckout.logged_in_User_fills_in_payment_information()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1852655692,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "Logged in User gets purchase confirmation notification",
-            "match": {
-              "location": "ValidCheckout.logged_in_User_gets_purchase_confirmation_notification()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2482493677,
-              "status": "passed"
-            },
-            "line": 29,
-            "name": "Logged in User logouts",
-            "match": {
-              "location": "ValidCheckout.logged_in_User_logouts()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 147256,
-              "status": "passed"
-            },
-            "line": 30,
-            "name": "Logged out User closes browser",
-            "match": {
-              "location": "ValidCheckout.logged_out_User_closes_browser()"
+              "location": "Validlogin.user_closes_browser()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@SanityTest"
+            "name": "@FunctionalTest"
           },
           {
-            "name": "@End2EndTests"
+            "name": "@SmokeTest"
+          },
+          {
+            "name": "@SanityTest"
           }
         ]
       }
     ],
-    "name": "Checkout page function of www.heatclinic.com",
-    "description": "",
-    "id": "checkout-page-function-of-www.heatclinic.com",
+    "name": "Login function test of www.heatclinic.com",
+    "description": "\tDescription: Test to check whether a user can follow the process to login and logout of Member Page.",
+    "id": "login-function-test-of-www.heatclinic.com",
     "keyword": "Feature",
-    "uri": "src/test/resources/TestResource/Features/ValidUserCheckout.feature",
+    "uri": "src/test/resources/TestResource/Features/Validlogin.feature",
     "tags": []
   }
 ]

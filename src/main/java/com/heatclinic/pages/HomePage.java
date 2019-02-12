@@ -31,7 +31,7 @@ public class HomePage {
 	public HomePage() {
 		loadHomePage();
 	}
-
+	
 	private void loadHomePage() {
 		this.driver = DriverFactory.initialize().getdriver();
 		PageFactory.initElements(driver, this);

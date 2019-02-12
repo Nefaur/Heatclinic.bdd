@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/resources/TestResource/Features/ValidUserCheckout.feature",
+		features = "src/test/resources/TestResource/Features/Validlogin.feature",
 		glue = { "com.heatclinic.steps" },
 		// dryRun=true,
 		strict = true, monochrome = true,

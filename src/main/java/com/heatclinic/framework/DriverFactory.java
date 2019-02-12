@@ -19,7 +19,7 @@ public class DriverFactory {
 
 	private ThreadLocal<WebDriver> driverBase = new ThreadLocal<WebDriver>();
 	private static DriverFactory instance = null;
-	private static String Hub_URL = "http://192.168.137.1:4444/wd/hub";
+	private static String Hub_URL = "http://192.168.0.104:4444/wd/hub";
 
 	public static final String USERNAME = "nefaurbhuiyan1";
 	public static final String AUTOMATE_KEY = "YBtZTy2e8jPmbemabR4t";
@@ -154,7 +154,8 @@ public class DriverFactory {
 				}
 				break;
 
-			case "":
+			case "headless":
+				System.out.println("Starting Chrome Headless browser");
 				ChromeDriverManager.getInstance().arch32().setup();
 				ChromeOptions options1 = new ChromeOptions();
 				options1.addArguments("window-size=1400,800");

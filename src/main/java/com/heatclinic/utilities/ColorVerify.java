@@ -6,7 +6,7 @@ public class ColorVerify {
 
 	String linkBgColor, linkTextColor, linkBgColorChild, linkTextColorChild;
 
-	public void verifyColorOfLinkMenuOnHover(WebElement parent) {
+	public synchronized void verifyColorOfLinkMenuOnHover(WebElement parent) {
 		linkBgColor = parent.getCssValue("background-color");
 		linkTextColor = parent.getCssValue("color");
 		System.out.println("On hover: \n Background link color of parent is: " + linkBgColor);
@@ -16,7 +16,7 @@ public class ColorVerify {
 		System.out.println("\n");
 	}
 
-	public void verifyColorOfLinkMenuAfterHover(WebElement parent, WebElement child) {
+	public synchronized void verifyColorOfLinkMenuAfterHover(WebElement parent, WebElement child) {
 		linkBgColor = parent.getCssValue("background-color");
 		linkTextColor = parent.getCssValue("color");
 		linkBgColorChild = child.getCssValue("background-color");
@@ -33,7 +33,7 @@ public class ColorVerify {
 		System.out.println("\n");
 	}
 
-	private void hexColorVerify(String color) {
+	private synchronized void hexColorVerify(String color) {
 		try {
 			String[] hexValue = color.replace("rgba(", "").replace(")", "").split(",");
 

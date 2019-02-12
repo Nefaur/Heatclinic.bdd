@@ -23,10 +23,10 @@ public class LoginPage {
 
 	private WebDriver driver;
 
-	@FindBy(how = How.XPATH, using = "//input[@id='username']")
+	@FindBy(xpath= "//input[@id='username']")
 	private WebElement signInEmailInput;
 
-	@FindBy(how = How.XPATH, using = "//div[@class='label-floating form-group is-empty']//input[@id='password']")
+	@FindBy(xpath= "//div[@class='label-floating form-group is-empty']//input[@id='password']")
 	private WebElement signInPasswordInput;
 
 	@FindBy(how = How.XPATH, using = "//button[contains(text(),'Login')]")

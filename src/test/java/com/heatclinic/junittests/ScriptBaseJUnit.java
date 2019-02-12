@@ -22,7 +22,6 @@ public class ScriptBaseJUnit extends TestBase {
 		System.out.println("Ending all tests!");
 	}
 
-//	@Before
 	public void setUp() {
 		capture.startCapture("target/Video/",this.getClass().getSimpleName(), false);
 		System.out.println("Opening website.");
@@ -32,7 +31,6 @@ public class ScriptBaseJUnit extends TestBase {
 		driver.manage().window().maximize();
 	}
 
-//	@After
 	public void tearDown() {
 		PageManager.getInstance().closePages();
 		System.out.println("Closing browser.");

@@ -1,26 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="65.785039">
-<testcase classname="Checkout page function of www.heatclinic.com" name="Testing the checkout page functionality for valid users" time="65.785039">
-<system-out><![CDATA[Given Existing Valid User opens browser.....................................passed
-When Existing Valid User goes to "https://demo.broadleafcommerce.org/" website.passed
-Then Existing Valid User hovers to sign_in_link.............................passed
-Then Existing Valid User clicks sign_in_link................................passed
-Then Existing Valid User enters username and password in login text fields..passed
-Then Existing Valid User clicks on submit button............................passed
-Then Existing Valid User is taken to member page............................passed
-Then Existing Valid User enters text in search field........................passed
-Then Logged in User chooses the selection from search box field.............passed
-Then Logged in User filters the selection by choosing price range...........passed
-Then Logged in User clicks on a selection from search result................passed
-Then Logged in User clicks add to cart......................................passed
-Then Logged in User goes to view cart page..................................passed
-Then Logged in User goes to checkout page...................................passed
-And Logged in User increases the number of selected items to two and then decreases to one.passed
-Then Logged in User clicks checkout button..................................passed
-Then Logged in User fills in shipping information and clicks Continue.......passed
-Then Logged in User fills in payment information............................passed
-Then Logged in User gets purchase confirmation notification.................passed
-Then Logged in User logouts.................................................passed
-Then Logged out User closes browser.........................................passed
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="104.388232">
+<testcase classname="Login function test of www.heatclinic.com" name="_2" time="104.388232">
+<system-out><![CDATA[Given User opens browser....................................................passed
+When User goes to "https://demo.broadleafcommerce.org/" website.............passed
+Then User hovers to sign_in_link............................................passed
+Then User clicks sign_in_link...............................................passed
+Then User enters "moltenboy.robin@gmail.com" as username....................passed
+Then User enters "A1234567@" as password....................................passed
+Then User clicks on submit button...........................................passed
+Then User is taken to member page...........................................passed
+Then User logsout...........................................................passed
+Then User closes browser....................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -1,6 +1,6 @@
 package com.heatclinic.utilities;
 
-import com.heatclinic.framework.PropertyReader;
+import com.heatclinic.framework.DriverFactory;
 
 public class Delayed {
 
@@ -13,7 +13,8 @@ public class Delayed {
 	}
 
 	public void delay(int time) {
-		final String tbrowser = PropertyReader.BROWSER_TO_RUN;
+		final String tbrowser = DriverFactory.initialize().getdriver().toString();
+		System.out.println(tbrowser.contains("ch"));
 		switch (tbrowser) {
 
 		case "chrome":
@@ -28,7 +29,7 @@ public class Delayed {
 			sleeper(time - time);
 			break;
 
-		case "":
+		case "headless":
 			sleeper(time - time);
 			break;
 
